@@ -1,0 +1,42 @@
+# --- Python / Django ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# Arquivo de ambiente virtual
+venv/
+.env
+*.env
+
+# --- Logs ---
+*.log
+*.pot
+*.mo
+
+# --- IDEs / Editores ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Sistema Operacional ---
+.DS_Store
+Thumbs.db
+
+# --- Node (se usar para build de frontend) ---
+node_modules/
+package-lock.json
+yarn.lock
+
+# --- Arquivos temporários ---
+*.tmp
+*.bak
+*.orig
