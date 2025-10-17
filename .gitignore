@@ -1,0 +1,17 @@
+# Arquivos de Bytecode e Cache do Python
+__pycache__/
+*.pyc
+
+# Banco de Dados Local
+db.sqlite3
+
+# Ambiente Virtual
+.venv/
+venv/
+env/
+
+# Arquivos de Configuração do PyCharm
+.idea/
+
+# Arquivos de Log
+*.log
