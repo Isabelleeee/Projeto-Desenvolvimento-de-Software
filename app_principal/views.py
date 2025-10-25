@@ -1,3 +1,8 @@
-from django.shortcuts import render
+#from django.shortcuts import render
+from rest_framework import generics
+from .models import Trilha
+from .serializers import TrilhaSerializer
 
-# Create your views here.
+class TrilhaListAPIView(generics.ListAPIView):
+    queryset = Trilha.objects.all()
+    serializer_class = TrilhaSerializer
