@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic.base import RedirectView
-from app_principal import views # Precisamos das views para o login
+from app_principal import views
 
 urlpatterns = [
     path('', RedirectView.as_view(url='/admin/', permanent=True)),
     path('admin/', admin.site.urls),
+path('api/trilhas/', views.TrilhaListAPIView.as_view(), name='lista_trilhas'),
     path('api/admin-login/', views.AdminLoginAPIView.as_view(), name='admin_login'),
 ]

@@ -18,3 +18,8 @@ env/
 
 # Ignora as dependências do front-end
 /front area de estudante/node_modules/
+
+# Ignora WebDrivers
+msedgedriver.exe
+chromedriver.exe
+geckodriver.exe

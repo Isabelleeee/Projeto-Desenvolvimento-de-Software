@@ -1,8 +1,16 @@
-from rest_framework import status
-from .serializers import LoginSerializer
+from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.contrib.auth import login
+from .models import Trilha
+from .serializers import TrilhaSerializer, LoginSerializer
+
+class TrilhaListAPIView(generics.ListAPIView):
+    """
+    API para listar todas as trilhas disponíveis.
+    """
+    queryset = Trilha.objects.all() # Busca todas as trilhas
+    serializer_class = TrilhaSerializer
 
 class AdminLoginAPIView(APIView):
     """
@@ -15,9 +23,7 @@ class AdminLoginAPIView(APIView):
         serializer = self.serializer_class(data=request.data,
                                            context={'request': request})
 
-        # validar os dados
         serializer.is_valid(raise_exception=True)
-
         user = serializer.validated_data['user']
         login(request, user)
         return Response(
