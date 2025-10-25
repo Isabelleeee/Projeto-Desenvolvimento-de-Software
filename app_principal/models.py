@@ -17,7 +17,7 @@ class Trilha(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True, blank=True)
     tipo = models.CharField(max_length=3, choices=TIPO_TRILHA_CHOICES, default='PRE')
     data_criacao = models.DateTimeField(auto_now_add=True)
-    duracao_estimada = models.PositiveIntegerField(help_text="Duração estimada em minutos")
+    duracao_estimada = models.PositiveIntegerField(help_text="Duração estimada em minutos",default=0)
 
     def __str__(self):
         return self.titulo

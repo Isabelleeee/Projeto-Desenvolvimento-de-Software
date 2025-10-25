@@ -15,3 +15,6 @@ env/
 
 # Arquivos de Log
 *.log
+
+# Ignora as dependências do front-end
+/front area de estudante/node_modules/
