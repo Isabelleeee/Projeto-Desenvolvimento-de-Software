@@ -17,11 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from django.contrib import admin
-from django.urls import path, include # Adicione 'include'
-from app_principal import views # Importe as views do nosso app
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/trilhas/', views.TrilhaListAPIView.as_view(), name='lista_trilhas'),
 ]
