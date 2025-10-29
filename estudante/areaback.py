@@ -218,3 +218,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("FUNCIONOU")
