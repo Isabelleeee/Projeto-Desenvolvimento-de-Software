@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { BookOpen, Code, Database, Brain, Calculator, Lightbulb, HelpCircle } from "lucide-react";
 
-const API_URL = "http://127.0.0.1:8000/api/trilhas/";
+const API_URL = "http://127.0.0.1:8000/api/principal/trilhas/";
 
 interface ApiTrail {
   id: number;
