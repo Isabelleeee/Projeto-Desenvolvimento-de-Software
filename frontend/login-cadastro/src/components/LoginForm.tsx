@@ -86,7 +86,7 @@ export function LoginForm({ onSwitchToSignup }: LoginFormProps) {
             window.location.href = 'http://127.0.0.1:8000/admin/';
           } else {
             console.log('Redirecionando para área do estudante...');
-            window.location.href = 'http://localhost:5173/';
+            window.location.href = 'http://localhost:3002/';
           }
         }, 800);
       } else {
