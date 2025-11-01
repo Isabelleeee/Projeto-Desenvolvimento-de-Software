@@ -7,6 +7,8 @@ from .models import Trilha, Etapa, Categoria
 from .serializers import TrilhaSerializer, UnifiedLoginSerializer
 import random
 from rest_framework.permissions import AllowAny
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
 
 # ===============================
 # 🔹 Função simulando a IA
@@ -98,3 +100,10 @@ class UnifiedLoginAPIView(generics.GenericAPIView):
             },
             status=status.HTTP_200_OK
         )
+@login_required
+def redirect_admin(request):
+    return redirect('/admin/')
+
+@login_required
+def redirect_estudante(request):
+    return redirect('http://localhost:3000/area-estudante')

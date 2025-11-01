@@ -1,67 +1,101 @@
-#Versão do teste para o navegador EDGE
+from django.test import TestCase, Client
+from django.contrib.auth.models import User
+from django.urls import reverse
+from django.contrib.auth import get_user_model
 
-import time
-from selenium import webdriver
-from selenium.webdriver.common.by import By
+class LoginUnificadoViewTest(TestCase):
+    def setUp(self):
+        """Cria dois usuários: um admin e um estudante"""
+        self.client = Client()
+        self.url = reverse('login_unificado')
 
-SUPERUSER_USERNAME = 'giovanna'
-SUPERUSER_PASSWORD = '20042001'
-LIVE_SERVER_URL = 'http://127.0.0.1:8000/admin/'
+        # Admin
+        self.admin_user = User.objects.create_user(
+            username='admin_teste',
+            email='admin@teste.com',
+            password='senha123',
+            is_staff=True
+        )
 
-# --- O TESTE ---
-# Inicializa o driver do Edge
-print("Inicializando o WebDriver do Edge...")
-driver = webdriver.Edge()
-print("WebDriver inicializado.")
+        # Estudante
+        self.estudante_user = User.objects.create_user(
+            username='aluno_teste',
+            email='aluno@teste.com',
+            password='senha123',
+            is_staff=False
+        )
 
-try:
-    print("Iniciando teste funcional de login...")
+    def test_login_admin_redireciona_para_admin(self):
+        """Admin deve ser redirecionado para o painel Django"""
+        response = self.client.post(self.url, {
+            'username': 'admin_teste',
+            'password': 'senha123',
+            'profile_type': 'admin'
+        })
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(response['Location'].startswith('/admin/'))
 
-    # 1. Navegar para a URL
-    driver.get(LIVE_SERVER_URL)
-    print(f"Navegando para {LIVE_SERVER_URL}")
-    time.sleep(2) # Pausa para a página carregar
+    def test_login_estudante_redireciona_para_area_estudante(self):
+        """Estudante deve ser redirecionado para a área do estudante"""
+        response = self.client.post(self.url, {
+            'username': 'aluno_teste',
+            'password': 'senha123',
+            'profile_type': 'estudante'
+        })
+        self.assertEqual(response.status_code, 302)
+        self.assertIn('http://localhost:3000', response['Location'])
 
-    # 2. Encontrar campos e preencher
-    print("Encontrando campos de usuário e senha...")
-    username_input = driver.find_element(By.ID, 'id_username')
-    password_input = driver.find_element(By.ID, 'id_password')
-    print("Campos encontrados.")
 
-    username_input.send_keys(SUPERUSER_USERNAME)
-    password_input.send_keys(SUPERUSER_PASSWORD)
-    print("Preencheu usuário e senha.")
-    time.sleep(1)
+    def test_login_com_credenciais_invalidas(self):
+        """Deve exibir erro para credenciais inválidas"""
+        response = self.client.post(self.url, {
+            'username': 'nao_existe',
+            'password': 'errada',
+            'profile_type': 'estudante'
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Credenciais inválidas")
 
-    # 3. Encontrar e clicar no botão de login
-    print("Encontrando botão de login...")
-    login_button = driver.find_element(By.CSS_SELECTOR, 'input[type="submit"]')
-    print("Botão encontrado.")
-    login_button.click()
-    print("Clicou em 'Log in'.")
-    time.sleep(3) # Pausa para a página de admin carregar
+    def test_login_admin_com_tipo_estudante(self):
+        """Admin tentando logar como estudante deve dar erro"""
+        response = self.client.post(self.url, {
+            'username': 'admin_teste',
+            'password': 'senha123',
+            'profile_type': 'estudante'
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "não podem acessar o portal do estudante")
 
-    # 4. Verificação
-    print("Verificando se o login foi bem-sucedido...")
-    body_text = driver.find_element(By.TAG_NAME, 'body').text
-    # Verifica se algum texto esperado está na página pós-login
-    if "Bem-vindo" in body_text or "ADMINISTRAÇÃO ESTUDAAI" in body_text.upper() or "Site administration" in body_text:
-        print("VERIFICAÇÃO: OK - Login realizado com sucesso!")
-        print("Status do Teste: Sucesso")
-    else:
-        print("VERIFICAÇÃO: FALHA - Não foi possível confirmar o login. Texto da página:")
-        print("--------------------")
-        print(body_text[:500]) # Mostra os primeiros 500 caracteres da página
-        print("--------------------")
-        print("Status do Teste: Falha")
+    def test_login_estudante_com_tipo_admin(self):
+        """Estudante tentando logar como admin deve dar erro"""
+        response = self.client.post(self.url, {
+            'username': 'aluno_teste',
+            'password': 'senha123',
+            'profile_type': 'admin'
+        })
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "não tem permissão de Administrador")
 
-except Exception as e:
-    print(f"Ocorreu um erro durante o teste: {e}")
-    print("Status do Teste: Falha")
+class LogoutUnificadoTest(TestCase):
+    """Testa se o logout redireciona corretamente para o login unificado"""
 
-finally:
-    # Fecha o navegador no final
-    print("Teste finalizado. Fechando o navegador...")
-    if 'driver' in locals() and driver:
-        driver.quit()
-    print("Navegador fechado.")
+    def setUp(self):
+        self.client = Client()
+        self.user_model = get_user_model()
+        self.user = self.user_model.objects.create_user(
+            username='usuario_teste_logout',
+            password='senha123',
+            is_staff=False
+        )
+
+    def test_logout_redireciona_para_login_unificado(self):
+        """Após logout, o usuário deve ser redirecionado para /login-unificado/"""
+        # Realiza login
+        self.client.login(username='usuario_teste_logout', password='senha123')
+
+        # Faz logout
+        response = self.client.get('/logout/', follow=False)
+
+        # Verifica o redirecionamento
+        self.assertEqual(response.status_code, 302)
+        self.assertIn('/login-unificado/', response['Location'])

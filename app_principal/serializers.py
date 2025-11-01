@@ -1,98 +1,67 @@
-'''
 from rest_framework import serializers
 from django.contrib.auth import authenticate, get_user_model
 from django.utils.translation import gettext_lazy as _
-
-User = get_user_model()
-
-
-class LoginSerializer(serializers.Serializer):
-    """
-    Serializer para validar o login do Admin.
-    """
-    username = serializers.CharField()
-    password = serializers.CharField(write_only=True) # write_only=True esconde a senha
-
-    def validate(self, data):
-        username = data.get('username')
-        password = data.get('password')
-
-        if username and password:
-            #Tenta autenticar o usuário com o Django
-            user = authenticate(request=self.context.get('request'),
-                                username=username, password=password)
-
-            #Verifica se o usuário é válido E se é um Admin
-            if not user:
-                raise serializers.ValidationError("Credenciais inválidas.")
-
-            if not user.is_staff: # is_staff ou is_superuser
-                raise serializers.ValidationError("Este usuário não tem permissão de administrador.")
-
-        else:
-            raise serializers.ValidationError("Usuário e senha são obrigatórios.")
-
-        # anexa o usuário aos dados
-        data['user'] = user
-        return data'''
-# em app_principal/serializers.py
 from .models import Trilha, Categoria
-from rest_framework import serializers
-from django.contrib.auth import authenticate, get_user_model
-from django.utils.translation import gettext_lazy as _
 
 User = get_user_model()
 
 
+# =====================================================
+# 🔹 SERIALIZERS DE MODELOS (TRILHA / CATEGORIA)
+# =====================================================
 class CategoriaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Categoria
         fields = ['nome']
 
+
 class TrilhaSerializer(serializers.ModelSerializer):
-    categoria = CategoriaSerializer() # Para mostrar o nome da categoria, não o ID
+    categoria = CategoriaSerializer()  # mostra o nome da categoria
 
     class Meta:
         model = Trilha
         fields = ['id', 'titulo', 'descricao', 'categoria', 'duracao_estimada']
 
-# --- NOVO SERIALIZER DE LOGIN UNIFICADO ---
+
+# =====================================================
+# 🔹 SERIALIZER DE LOGIN UNIFICADO
+# =====================================================
+PROFILE_CHOICES = [
+    ('admin', 'Administrador'),
+    ('aluno', 'Aluno'),
+    ('estudante', 'Estudante'),
+    ('student', 'Student'),
+]
 
 class UnifiedLoginSerializer(serializers.Serializer):
-    """
-    Valida o login tanto para Alunos quanto para Admins.
-    """
-    username = serializers.CharField(
-        label=_("Username"),
-        write_only=True
-    )
+    username = serializers.CharField(label=_("Usuário"), write_only=True)
     password = serializers.CharField(
-        label=_("Password"),
-        style={'input_type': 'password'},  # Ajuda o DRF a renderizar como senha
+        label=_("Senha"),
+        style={'input_type': 'password'},
         trim_whitespace=False,
         write_only=True
     )
-    # O front-end deve enviar 'aluno' ou 'admin'
-    profile_type = serializers.ChoiceField(
-        choices=['aluno', 'admin'],
-        write_only=True
-    )
+    profile_type = serializers.ChoiceField(choices=PROFILE_CHOICES, write_only=True)
+
 
     def validate(self, data):
         username = data.get('username')
         password = data.get('password')
         profile_type = data.get('profile_type')
 
+        # Verificação básica
         if not username or not password:
             raise serializers.ValidationError(
                 _("Usuário e senha são obrigatórios."),
                 code='authorization'
             )
 
-        # 1. Autenticação (Placeholder):
-        # A função processar_login() que você descreveu está aqui.
-        user = authenticate(request=self.context.get('request'),
-                            username=username, password=password)
+        # Autenticação no Django
+        user = authenticate(
+            request=self.context.get('request'),
+            username=username,
+            password=password
+        )
 
         if not user:
             raise serializers.ValidationError(
@@ -100,42 +69,32 @@ class UnifiedLoginSerializer(serializers.Serializer):
                 code='authorization'
             )
 
-        # 2. Verificação de Perfil:
+        # Regras de permissão
         if profile_type == 'admin':
-            if not user.is_staff:  # Verifica se é Admin
+            if not user.is_staff:
                 raise serializers.ValidationError(
                     _("Este usuário não tem permissão de Administrador."),
                     code='authorization'
                 )
-            # Placeholder para a função do Admin
             self.abrir_painel_admin()
 
-        elif profile_type == 'aluno':
-            if user.is_staff:  # Admins não devem logar como alunos
+        elif profile_type in ['aluno', 'estudante', 'student']:
+            if user.is_staff:
                 raise serializers.ValidationError(
                     _("Contas de administrador não podem acessar o portal do aluno."),
                     code='authorization'
                 )
-            # Placeholder para a função do Aluno
             self.abrir_portal_aluno()
 
-        # Se tudo estiver OK, retorna os dados do usuário
         data['user'] = user
+        data['profile_type'] = profile_type  # mantém o tipo no retorno
         return data
 
-    # --- Funções de Placeholder (como solicitado) ---
-
+    # =====================================================
+    # 🔹 Placeholders (para logs / rastreabilidade)
+    # =====================================================
     def abrir_portal_aluno(self):
-        """
-        Placeholder: Esta função seria chamada se o login do aluno
-        fosse bem-sucedido. Em um sistema real, poderíamos gerar um Token JWT aqui.
-        """
-        print('Abrindo portal do aluno...')
+        print('Login aluno/estudante autorizado.')
 
     def abrir_painel_admin(self):
-        """
-        Placeholder: Esta função seria chamada se o login do admin
-        fosse bem-sucedido. Em um sistema real, poderíamos gerar um Token JWT
-        ou confirmar a sessão.
-        """
-        print('Abrindo painel do administrador...')
+        print('Login admin autorizado.')
