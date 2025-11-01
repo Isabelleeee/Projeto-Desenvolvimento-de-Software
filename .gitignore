@@ -63,3 +63,5 @@ __pypackages__/
 # Misc
 *.env
 *.local
+
+frontend/login-cadastro/front-login-cadastro/
