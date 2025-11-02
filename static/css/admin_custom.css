@@ -1,0 +1,217 @@
+/* ==========================
+   Estuda.AI Admin Custom Style (Tema Roxo Moderno)
+   ========================== */
+
+/* Fonte e reset */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+html body {
+    all: unset;
+    display: block;
+    background: #f7f6fc !important;
+    color: #1a1625 !important;
+    font-family: "Poppins", sans-serif !important;
+}
+
+/* ==========================
+   Paleta de Cores
+   ========================== */
+:root {
+    --roxo-claro: #a78bfa;
+    --roxo-principal: #7c3aed;
+    --roxo-escuro: #4c1d95;
+    --cinza-fundo: #f7f6fc;
+    --cinza-card: #ece8ff;
+    --texto-claro: #2c244a;
+}
+
+/* ==========================
+   Estrutura Geral
+   ========================== */
+body, #container {
+    background: var(--cinza-fundo);
+    color: var(--texto-claro);
+    font-family: "Poppins", sans-serif;
+}
+
+#content, #container, .module, .app-list, .dashboard-module {
+    background-color: #ffffff !important; /* ALTERADO: fundo branco */
+    border-radius: 12px !important;
+    color: var(--texto-claro) !important;
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* ==========================
+   Cabeçalho e Navegação
+   ========================== */
+#header {
+    background: linear-gradient(90deg, var(--roxo-escuro), var(--roxo-principal)) !important;
+    color: white !important;
+    border: none !important;
+}
+
+#header a, #header h1 {
+    color: #ffffff !important;
+}
+
+#user-tools {
+    color: #d9c7ff !important;
+}
+
+/* Remove o botão "Login Unificado" */
+#user-tools a[href*="login-unificado"],
+#user-tools a[href*="login_unificado"],
+#user-tools a:contains("Login Unificado") {
+    display: none !important;
+}
+
+/* ==========================
+   Breadcrumbs e Títulos
+   ========================== */
+.breadcrumbs, .breadcrumbs a, .breadcrumbs span {
+    background: transparent !important;
+    color: var(--roxo-principal) !important;
+    font-weight: 500;
+}
+
+.breadcrumbs a:hover {
+    color: var(--roxo-escuro) !important;
+}
+
+.dashboard .col-lg-12 h1,
+#content h1,
+#content-main h1 {
+    color: var(--roxo-principal) !important;
+    font-weight: 600 !important;
+}
+
+/* ==========================
+   Módulos e Blocos
+   ========================== */
+.module {
+    background: #ffffff !important; /* ALTERADO: fundo branco */
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(124, 58, 237, 0.1);
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #e1d8ff;
+}
+
+.module caption {
+    background: #ffffff !important; /* ALTERADO */
+    color: var(--roxo-principal) !important; /* Título em roxo */
+    border-radius: 12px 12px 0 0 !important;
+    font-weight: 600;
+    padding: 10px;
+}
+
+/* ==========================
+   Botões (Add / Change / Gerais)
+   ========================== */
+button, input[type=submit], .button {
+    background: linear-gradient(90deg, #8b5cf6, #7c3aed) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: white !important;
+    padding: 6px 14px !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(124, 58, 237, 0.3);
+}
+
+button:hover, input[type=submit]:hover, .button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #7c3aed, #6d28d9) !important;
+}
+
+/* Botão "Add" */
+.addlink {
+    background: linear-gradient(90deg, #8b5cf6, #7c3aed) !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+    padding: 6px 12px !important;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(124, 58, 237, 0.25);
+}
+
+.addlink:hover {
+    background: linear-gradient(90deg, #7c3aed, #6d28d9) !important;
+}
+
+/* Botão "Change" */
+.changelink {
+    background: linear-gradient(90deg, #6366f1, #4f46e5) !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+    padding: 6px 12px !important;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(99, 102, 241, 0.25);
+}
+
+.changelink:hover {
+    background: linear-gradient(90deg, #4f46e5, #4338ca) !important;
+}
+
+/* ==========================
+   Links e Tabelas
+   ========================== */
+a {
+    color: var(--roxo-principal) !important;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--roxo-escuro) !important;
+}
+
+/* Listas e Tabelas */
+.dashboard-module h2,
+.app-list a,
+.model-name {
+    color: #1a1625 !important;
+    font-weight: 600 !important;
+}
+
+table th, table td {
+    background-color: #ffffff !important; /* ALTERADO: fundo branco */
+    color: #2c244a !important;
+    border-color: #d3c5ff !important;
+    padding: 6px 10px !important;
+}
+
+table tr:hover td {
+    background-color: #f8f7ff !important;
+    color: #1a1625 !important;
+}
+
+/* ==========================
+   Campos e Inputs
+   ========================== */
+input, select, textarea {
+    border-radius: 6px !important;
+    border: 1px solid #d3c5ff !important;
+    background-color: #ffffff !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--roxo-principal) !important;
+    box-shadow: 0 0 4px rgba(124, 58, 237, 0.3) !important;
+}
+
+/* ==========================
+   Dashboard Hover Glow
+   ========================== */
+.dashboard-module:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(124, 58, 237, 0.25);
+}
+
+/* ==========================
+   Transições gerais
+   ========================== */
+* {
+    transition: all 0.3s ease;
+}

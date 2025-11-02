@@ -1,0 +1,80 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/admin_custom.css' %}">
+<style>
+    body.login {
+        background: linear-gradient(180deg, #1e1b2e, #2a2340);
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+    }
+    .login #content {
+        background: #2a2340;
+        border-radius: 15px;
+        padding: 40px;
+        width: 360px;
+        margin: 100px auto;
+        box-shadow: 0 0 20px rgba(106, 27, 154, 0.4);
+        text-align: center;
+    }
+    .login #content h1 {
+        color: #b388ff;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    .login .submit-row input[type=submit] {
+        width: 100%;
+        background: linear-gradient(90deg, #6a1b9a, #8e24aa);
+        border: none;
+        color: white;
+        font-weight: 500;
+        border-radius: 8px;
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .login .submit-row input[type=submit]:hover {
+        background: linear-gradient(90deg, #8e24aa, #ab47bc);
+    }
+    .login input[type=text], .login input[type=password] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: none;
+        margin-bottom: 15px;
+        background: #1e1b2e;
+        color: white;
+    }
+    .login .logo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        background: #b388ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 2rem;
+        color: #1e1b2e;
+        margin: 0 auto 15px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div class="logo">A</div>
+    <h1>Bem-vindo(a) ao EstudaAI 💜</h1>
+    <form method="post" action="{% url 'admin:login' %}">
+        {% csrf_token %}
+        {{ form.username }}
+        {{ form.password }}
+        <div class="submit-row">
+            <input type="submit" value="Entrar">
+        </div>
+    </form>
+</div>
+{% endblock %}

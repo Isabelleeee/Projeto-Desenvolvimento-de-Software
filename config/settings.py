@@ -18,6 +18,7 @@ ALLOWED_HOSTS = []
 # 📦 Apps instalados
 # ========================
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -29,6 +30,63 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 ]
+JAZZMIN_UI_TWEAKS = {
+    "theme": "flatly",  # leve e moderna
+    "dark_mode_theme": "darkly",
+}
+
+# ================================
+# CONFIGURAÇÃO DO TEMA JAZZMIN
+# ================================
+JAZZMIN_SETTINGS = {
+    "site_title": "EstudaAI - Administração",
+    "site_header": "EstudaAI",
+    "site_brand": "Painel Administrativo",
+    "welcome_sign": "Bem-vindo(a) ao EstudaAI 💜",
+    "copyright": "EstudaAI © 2025",
+
+    # Ícone da aba e do painel
+    "site_logo": None,
+    "login_logo": None,
+    "login_logo_dark": None,
+
+    # Layout
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "hide_apps": [],
+    "hide_models": [],
+
+    # Ícones (Font Awesome)
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "app_principal.Categoria": "fas fa-tags",
+        "app_principal.Trilha": "fas fa-route",
+        "app_principal.Etapa": "fas fa-tasks",
+    },
+
+    # Links no topo
+    "topmenu_links": [
+        {"name": "Início", "url": "admin:index", "permissions": ["auth.view_user"]},
+    ],
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "flatly",
+    "dark_mode_theme": None,
+    "navbar": "navbar-dark bg-purple-800",
+    "sidebar": "sidebar-dark-purple",
+    "brand_colour": "navbar-purple",
+    "accent": "accent-purple",
+    "button_classes": {
+        "primary": "btn-primary bg-purple-700 border-none",
+        "secondary": "btn-outline-light",
+        "success": "btn-success",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+    },
+}
+
 
 # ========================
 # ⚙️ Middlewares
@@ -56,6 +114,7 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
@@ -97,7 +156,7 @@ USE_TZ = True
 # ========================
 # 🧩 Arquivos estáticos
 # ========================
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Caminho para o build do React (gerado por npm run build)
 REACT_BUILD_DIR = BASE_DIR / "frontend" / "login-cadastro" / "build"
@@ -107,15 +166,17 @@ TEMPLATES[0]['DIRS'] += [REACT_BUILD_DIR]
 
 # Inclui arquivos estáticos do React (JS, CSS, imagens)
 STATICFILES_DIRS = [
+    BASE_DIR / "static",
     REACT_BUILD_DIR / "assets"
 ]
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # ========================
 # 🔁 Configuração de login/logout
 # ========================
 LOGIN_URL = '/login-unificado/'
 LOGIN_REDIRECT_URL = '/area-estudante/'
-LOGOUT_REDIRECT_URL = '/login-unificado/'
+LOGOUT_REDIRECT_URL = 'http://localhost:3000/'
 
 # ========================
 # 🔗 CORS e API
