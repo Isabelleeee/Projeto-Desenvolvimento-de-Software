@@ -1,5 +1,6 @@
 # app_principal/views.py
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
 from django.shortcuts import redirect
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -10,10 +11,6 @@ from .models import Trilha, Etapa
 from django.conf import settings
 from .serializers import TrilhaSerializer, EtapaSerializer
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
 
 # --------------------- LOGIN / LOGOUT ---------------------
 class LoginUnificadoView(APIView):
@@ -36,27 +33,28 @@ class LoginUnificadoView(APIView):
                 status=status.HTTP_403_FORBIDDEN,
             )
 
-        # Login de sessão Django
+        # Login Django (sessão)
         login(request, user)
 
-        # Token DRF
+        # Gera token DRF
         token, _ = Token.objects.get_or_create(user=user)
 
-        # Define tipo e redirect
-        if user.is_staff or user.is_superuser:
+        # Determina tipo de usuário e URL de redirecionamento
+        if user.is_superuser or user.is_staff:
             tipo = "admin"
-            redirect = os.getenv("FRONT_ADMIN_URL", "http://localhost:3002/")
+            redirect_url = getattr(settings, "FRONTEND_ADMIN_URL", "http://localhost:3002/")
         else:
             tipo = "estudante"
-            redirect = os.getenv("FRONT_ESTUDANTE_URL", "http://localhost:3001/")
+            redirect_url = getattr(settings, "FRONTEND_ESTUDANTE_URL", "http://localhost:3001/")
 
+        # Retorno padronizado para o front
         return Response(
             {
                 "mensagem": "Login realizado com sucesso!",
                 "usuario": user.username,
                 "tipo": tipo,
                 "token": token.key,
-                "redirect": redirect,
+                "redirect": redirect_url,
             },
             status=status.HTTP_200_OK,
         )
@@ -67,8 +65,38 @@ class LogoutView(APIView):
 
     def post(self, request):
         logout(request)
-        return Response({"mensagem": "Logout realizado com sucesso."},
-                        status=status.HTTP_200_OK)
+        return Response(
+            {"mensagem": "Logout realizado com sucesso."},
+            status=status.HTTP_200_OK
+        )
+
+
+# --------------------- CADASTRO ---------------------
+class CadastroView(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def post(self, request):
+        username = request.data.get("username")
+        email = request.data.get("email")
+        password = request.data.get("password")
+
+        if not username or not email or not password:
+            return Response({"error": "Preencha todos os campos."}, status=status.HTTP_400_BAD_REQUEST)
+
+        if User.objects.filter(username=username).exists():
+            return Response({"error": "Nome de usuário já cadastrado."}, status=status.HTTP_400_BAD_REQUEST)
+
+        if User.objects.filter(email=email).exists():
+            return Response({"error": "E-mail já cadastrado."}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Cria o novo usuário
+        user = User.objects.create_user(username=username, email=email, password=password)
+
+        # Retorna mensagem de sucesso
+        return Response(
+            {"message": "Usuário cadastrado com sucesso!", "usuario": user.username},
+            status=status.HTTP_201_CREATED
+        )
 
 
 # --------------------- TRILHAS ---------------------
@@ -116,11 +144,13 @@ class MeuProgressoView(APIView):
 
 # --------------------- REDIRECIONAMENTOS ---------------------
 def redirect_admin(request):
-    return redirect("http://localhost:3002/")
+    """Redireciona para o painel admin React"""
+    return redirect(settings.FRONTEND_ADMIN_URL)
 
 
 def redirect_estudante(request):
-    return redirect("http://localhost:3001/")
+    """Redireciona para o painel estudante React"""
+    return redirect(settings.FRONTEND_ESTUDANTE_URL)
 
 
 # --------------------- TESTE DE AUTENTICAÇÃO ---------------------

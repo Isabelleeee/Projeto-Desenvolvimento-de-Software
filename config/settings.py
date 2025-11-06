@@ -1,6 +1,6 @@
 """
 Django settings for config project.
-Integração limpa entre Django (backend) e React (fronts 3000, 3001, 3002)
+Integração completa entre Django (backend) e React (fronts: login 3000, estudante 3001, admin 3002)
 """
 
 from pathlib import Path
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
 
     # Bibliotecas externas
     "rest_framework",
-    'rest_framework.authtoken',
+    "rest_framework.authtoken",
     "corsheaders",
 ]
 
@@ -113,16 +113,16 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-# Caminhos dos builds React (para uso futuro em produção)
+# Caminhos dos builds React (opcional, para produção)
 REACT_LOGIN_DIR = BASE_DIR / "frontend" / "login-cadastro" / "dist"
 REACT_ESTUDANTE_DIR = BASE_DIR / "frontend" / "area-estudante" / "dist"
 REACT_ADMIN_DIR = BASE_DIR / "frontend" / "area-admin" / "dist"
 
 # ========================
-# 🔁 LOGIN / LOGOUT
+# 🔁 LOGIN / LOGOUT / REDIRECTS
 # ========================
 LOGIN_URL = "/api/login-unificado/"
-LOGIN_REDIRECT_URL = "/area-estudante/"
+LOGIN_REDIRECT_URL = "/api/meu-progresso/"
 LOGOUT_REDIRECT_URL = config("FRONTEND_LOGIN_URL", default="http://localhost:3000/")
 
 # ========================
@@ -133,7 +133,7 @@ FRONTEND_ESTUDANTE_URL = config("ALUNO_URL", default="http://localhost:3001/")
 FRONTEND_ADMIN_URL = config("ADMIN_URL", default="http://localhost:3002/")
 
 # ========================
-# 🔗 CORS e CSRF
+# 🔗 CORS e CSRF (React)
 # ========================
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
