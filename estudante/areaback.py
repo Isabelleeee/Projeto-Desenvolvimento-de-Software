@@ -1,5 +1,7 @@
 import uuid
 from datetime import datetime
+from django.http import HttpResponse 
+
 
 # --- Classes de Modelo de Dados ---
 
@@ -222,4 +224,4 @@ if __name__ == "__main__":
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("FUNCIONOU")
+    return HttpResponse("Área do Estudante - EstudaIA")
