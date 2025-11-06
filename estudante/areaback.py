@@ -225,3 +225,27 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("Área do Estudante - EstudaIA")
+
+import google.generativeai as genai
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
+import os
+
+# Configurar API key (pegamos de variável de ambiente por segurança)
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+
+@csrf_exempt
+def gerar_trilha(request):
+    if request.method == "POST":
+        data = json.loads(request.body)
+        tema = data.get("tema", "estudos gerais")
+
+        prompt = f"Monte uma trilha de estudos sobre {tema}, com 5 etapas do básico ao avançado. Cada etapa deve ter um título e uma breve descrição."
+
+        model = genai.GenerativeModel("gemini-1.5-flash")
+        response = model.generate_content(prompt)
+
+        return JsonResponse({"trilha": response.text})
+    else:
+        return JsonResponse({"erro": "Método não permitido"}, status=405)
