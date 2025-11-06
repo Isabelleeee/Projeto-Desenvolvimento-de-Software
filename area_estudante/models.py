@@ -1,6 +1,17 @@
 from django.db import models
 from django.conf import settings # Para pegar o User
-from app_principal.models import Etapa # Importa o modelo Etapa do outro app
+from app_principal.models import Etapa
+from django.db import models
+from django.contrib.auth.models import User
+from app_principal.models import Trilha
+
+class Inscricao(models.Model):
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE, related_name='inscricoes')
+    trilha = models.ForeignKey(Trilha, on_delete=models.CASCADE, related_name='inscricoes')
+    progresso = models.FloatField(default=0.0)
+
+    def __str__(self):
+        return f"{self.usuario.username} - {self.trilha.nome} ({self.progresso}%)"
 
 # Modelo para registrar a conclusão de uma etapa por um usuário
 class ProgressoEtapa(models.Model):

@@ -1,100 +1,97 @@
 from rest_framework import serializers
 from django.contrib.auth import authenticate, get_user_model
 from django.utils.translation import gettext_lazy as _
-from .models import Trilha, Categoria
+from .models import Trilha, Etapa, Categoria, Progresso
 
 User = get_user_model()
 
 
 # =====================================================
-# 🔹 SERIALIZERS DE MODELOS (TRILHA / CATEGORIA)
+# 🔹 SERIALIZERS DE MODELOS
 # =====================================================
 class CategoriaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Categoria
-        fields = ['nome']
+        fields = ["id", "nome"]
+
+
+class EtapaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Etapa
+        fields = ["id", "titulo", "descricao", "ordem"]
 
 
 class TrilhaSerializer(serializers.ModelSerializer):
-    categoria = CategoriaSerializer()  # mostra o nome da categoria
+    categoria = CategoriaSerializer(read_only=True)
+    etapas = EtapaSerializer(many=True, read_only=True, source="etapa_set")
 
     class Meta:
         model = Trilha
-        fields = ['id', 'titulo', 'descricao', 'categoria', 'duracao_estimada']
+        fields = ["id", "nome", "descricao", "categoria", "etapas"]
+
+
+class ProgressoSerializer(serializers.ModelSerializer):
+    trilha_nome = serializers.CharField(source="trilha.nome", read_only=True)
+    etapa_titulo = serializers.CharField(source="etapa.titulo", read_only=True)
+
+    class Meta:
+        model = Progresso
+        fields = [
+            "id",
+            "usuario",
+            "trilha",
+            "trilha_nome",
+            "etapa",
+            "etapa_titulo",
+            "progresso",
+            "concluido",
+            "data_conclusao",
+            "ultima_atualizacao",
+        ]
 
 
 # =====================================================
 # 🔹 SERIALIZER DE LOGIN UNIFICADO
 # =====================================================
 PROFILE_CHOICES = [
-    ('admin', 'Administrador'),
-    ('aluno', 'Aluno'),
-    ('estudante', 'Estudante'),
-    ('student', 'Student'),
+    ("admin", "Administrador"),
+    ("aluno", "Aluno"),
+    ("estudante", "Estudante"),
+    ("student", "Student"),
 ]
+
 
 class UnifiedLoginSerializer(serializers.Serializer):
     username = serializers.CharField(label=_("Usuário"), write_only=True)
     password = serializers.CharField(
-        label=_("Senha"),
-        style={'input_type': 'password'},
-        trim_whitespace=False,
-        write_only=True
+        label=_("Senha"), style={"input_type": "password"}, trim_whitespace=False, write_only=True
     )
     profile_type = serializers.ChoiceField(choices=PROFILE_CHOICES, write_only=True)
 
-
     def validate(self, data):
-        username = data.get('username')
-        password = data.get('password')
-        profile_type = data.get('profile_type')
+        username = data.get("username")
+        password = data.get("password")
+        profile_type = data.get("profile_type")
 
-        # Verificação básica
         if not username or not password:
-            raise serializers.ValidationError(
-                _("Usuário e senha são obrigatórios."),
-                code='authorization'
-            )
+            raise serializers.ValidationError(_("Usuário e senha são obrigatórios."), code="authorization")
 
-        # Autenticação no Django
         user = authenticate(
-            request=self.context.get('request'),
+            request=self.context.get("request"),
             username=username,
-            password=password
+            password=password,
         )
 
         if not user:
-            raise serializers.ValidationError(
-                _("Credenciais inválidas. Verifique o usuário e a senha."),
-                code='authorization'
-            )
+            raise serializers.ValidationError(_("Credenciais inválidas."), code="authorization")
 
-        # Regras de permissão
-        if profile_type == 'admin':
-            if not user.is_staff:
-                raise serializers.ValidationError(
-                    _("Este usuário não tem permissão de Administrador."),
-                    code='authorization'
-                )
-            self.abrir_painel_admin()
+        # Validação por tipo de usuário
+        if profile_type == "admin" and not user.is_staff:
+            raise serializers.ValidationError(_("Sem permissão de administrador."), code="authorization")
 
-        elif profile_type in ['aluno', 'estudante', 'student']:
-            if user.is_staff:
-                raise serializers.ValidationError(
-                    _("Contas de administrador não podem acessar o portal do aluno."),
-                    code='authorization'
-                )
-            self.abrir_portal_aluno()
+        if profile_type in ["aluno", "estudante", "student"] and user.is_staff:
+            raise serializers.ValidationError(_("Administradores não podem acessar a área do aluno."), code="authorization")
 
-        data['user'] = user
-        data['profile_type'] = profile_type  # mantém o tipo no retorno
+        data["user"] = user
+        data["profile_type"] = profile_type
         return data
-
-    # =====================================================
-    # 🔹 Placeholders (para logs / rastreabilidade)
-    # =====================================================
-    def abrir_portal_aluno(self):
-        print('Login aluno/estudante autorizado.')
-
-    def abrir_painel_admin(self):
-        print('Login admin autorizado.')

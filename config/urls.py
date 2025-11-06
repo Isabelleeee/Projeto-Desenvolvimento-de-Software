@@ -1,32 +1,41 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
-from django.views.generic import TemplateView
-from django.urls import reverse_lazy
+from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    # Logout do admin redireciona para login unificado
-    path('admin/logout/', auth_views.LogoutView.as_view(next_page='http://localhost:3000/')),
+    # =======================================
+    # 🔹 LOGOUT ADMIN → redireciona para login React
+    # =======================================
+    path("admin/logout/", auth_views.LogoutView.as_view(next_page=settings.FRONTEND_LOGIN_URL)),
 
-    # Painel administrativo
-    path('admin/', admin.site.urls),
+    # =======================================
+    # 🔹 PAINEL ADMIN DJANGO
+    # =======================================
+    path("admin/", admin.site.urls),
 
-    # Endpoints de API
-    path('api/principal/', include('app_principal.urls_api', namespace='app_principal_api')),
-    path('api/estudante/', include('area_estudante.urls', namespace='estudante')),
-    path('login-unificado/', include('app_principal.urls')),
+    # =======================================
+    # 🔹 ÁREA DO ESTUDANTE (API)
+    # =======================================
+    path("api/estudante/", include(("area_estudante.urls", "area_estudante"), namespace="estudante")),
 
-    # Rotas internas da aplicação (login_unificado, etc)
-    path('', include('app_principal.urls')),
+    # =======================================
+    # 🔹 APP PRINCIPAL (login, trilhas, IA, etc.)
+    # =======================================
+    path("", include("app_principal.urls")),
 ]
 
-# Serve o front React (index.html) na raiz /
+# =======================================
+# 🔹 Redireciona a raiz "/" para o React
+# =======================================
 urlpatterns += [
-    path('', TemplateView.as_view(template_name="index.html")),
+    path("", RedirectView.as_view(url=settings.FRONTEND_LOGIN_URL, permanent=False), name="home"),
 ]
 
-# Serve os assets do React (JS, CSS, imagens)
+# =======================================
+# 🔹 Serve arquivos estáticos em dev
+# =======================================
 if settings.DEBUG:
-    urlpatterns += static('/assets/', document_root=settings.REACT_BUILD_DIR / "assets")
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
