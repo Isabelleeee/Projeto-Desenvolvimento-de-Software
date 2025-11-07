@@ -17,6 +17,7 @@ urlpatterns = [
     # 🔄 Redirecionamentos
     path("redirect-admin/", views.redirect_admin, name="redirect_admin"),
     path("redirect-estudante/", views.redirect_estudante, name="redirect_estudante"),
+    path("api/user-profile/", views.UserProfileView.as_view(), name="user_profile"),
 
     # 🧪 Teste
     path("api/test-auth/", views.TestAuthView.as_view(), name="test_auth"),

@@ -1,4 +1,3 @@
-# app_principal/views.py
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
@@ -7,20 +6,31 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework import status, permissions
 from rest_framework.authtoken.models import Token
-from .models import Trilha, Etapa
 from django.conf import settings
+from .models import Trilha, Etapa
 from .serializers import TrilhaSerializer, EtapaSerializer
 import os
 
-# --------------------- LOGIN / LOGOUT ---------------------
+
+# ==========================================================
+# 🔐 LOGIN UNIFICADO (ADMIN + ESTUDANTE)
+# ==========================================================
 class LoginUnificadoView(APIView):
     permission_classes = [permissions.AllowAny]
 
     def post(self, request):
-        username = request.data.get("username")
+        username_or_email = request.data.get("username")
         password = request.data.get("password")
 
+        # 🔸 Permite login por e-mail ou nome de usuário
+        try:
+            user_obj = User.objects.get(email=username_or_email)
+            username = user_obj.username
+        except User.DoesNotExist:
+            username = username_or_email  # caso já seja o username
+
         user = authenticate(username=username, password=password)
+
         if user is None:
             return Response(
                 {"mensagem": "Usuário ou senha inválidos."},
@@ -33,21 +43,20 @@ class LoginUnificadoView(APIView):
                 status=status.HTTP_403_FORBIDDEN,
             )
 
-        # Login Django (sessão)
+        # Login de sessão Django
         login(request, user)
 
-        # Gera token DRF
+        # Cria token DRF
         token, _ = Token.objects.get_or_create(user=user)
 
-        # Determina tipo de usuário e URL de redirecionamento
-        if user.is_superuser or user.is_staff:
+        # Define redirecionamento com base no tipo de usuário
+        if user.is_staff or user.is_superuser:
             tipo = "admin"
-            redirect_url = getattr(settings, "FRONTEND_ADMIN_URL", "http://localhost:3002/")
+            redirect_url = os.getenv("ADMIN_URL", "http://localhost:3002/")
         else:
             tipo = "estudante"
-            redirect_url = getattr(settings, "FRONTEND_ESTUDANTE_URL", "http://localhost:3001/")
+            redirect_url = os.getenv("ALUNO_URL", "http://localhost:3001/")
 
-        # Retorno padronizado para o front
         return Response(
             {
                 "mensagem": "Login realizado com sucesso!",
@@ -60,6 +69,9 @@ class LoginUnificadoView(APIView):
         )
 
 
+# ==========================================================
+# 🚪 LOGOUT
+# ==========================================================
 class LogoutView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -67,39 +79,64 @@ class LogoutView(APIView):
         logout(request)
         return Response(
             {"mensagem": "Logout realizado com sucesso."},
-            status=status.HTTP_200_OK
+            status=status.HTTP_200_OK,
         )
 
 
-# --------------------- CADASTRO ---------------------
+# ==========================================================
+# 🧠 CADASTRO (ALUNO E ADMIN)
+# ==========================================================
 class CadastroView(APIView):
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [AllowAny]
 
     def post(self, request):
         username = request.data.get("username")
         email = request.data.get("email")
         password = request.data.get("password")
+        phone = request.data.get("phone", "")
+        is_staff = request.data.get("is_staff", False)
 
+        # Validação de campos obrigatórios
         if not username or not email or not password:
-            return Response({"error": "Preencha todos os campos."}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(
+                {"error": "Preencha todos os campos obrigatórios."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
 
+        # Verifica duplicidade
         if User.objects.filter(username=username).exists():
-            return Response({"error": "Nome de usuário já cadastrado."}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(
+                {"error": "Nome de usuário já cadastrado."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
 
         if User.objects.filter(email=email).exists():
-            return Response({"error": "E-mail já cadastrado."}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(
+                {"error": "E-mail já cadastrado."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
 
-        # Cria o novo usuário
+        # Criação do usuário
         user = User.objects.create_user(username=username, email=email, password=password)
+        user.is_staff = bool(is_staff)
+        user.save()
 
-        # Retorna mensagem de sucesso
+        tipo = "admin" if user.is_staff else "estudante"
+
         return Response(
-            {"message": "Usuário cadastrado com sucesso!", "usuario": user.username},
-            status=status.HTTP_201_CREATED
+            {
+                "message": "Usuário cadastrado com sucesso!",
+                "usuario": user.username,
+                "tipo": tipo,
+                "is_staff": user.is_staff,
+            },
+            status=status.HTTP_201_CREATED,
         )
 
 
-# --------------------- TRILHAS ---------------------
+# ==========================================================
+# 🧩 TRILHAS
+# ==========================================================
 class TrilhaListAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -128,9 +165,13 @@ class IniciarTrilhaView(APIView):
         try:
             trilha = Trilha.objects.get(id=trilha_id)
         except Trilha.DoesNotExist:
-            return Response({"error": "Trilha não encontrada."},
-                            status=status.HTTP_404_NOT_FOUND)
-        return Response({"mensagem": f"Trilha '{trilha.nome}' iniciada com sucesso!"})
+            return Response(
+                {"error": "Trilha não encontrada."},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+        return Response(
+            {"mensagem": f"Trilha '{trilha.nome}' iniciada com sucesso!"}
+        )
 
 
 class MeuProgressoView(APIView):
@@ -142,7 +183,9 @@ class MeuProgressoView(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-# --------------------- REDIRECIONAMENTOS ---------------------
+# ==========================================================
+# 🔁 REDIRECIONAMENTOS
+# ==========================================================
 def redirect_admin(request):
     """Redireciona para o painel admin React"""
     return redirect(settings.FRONTEND_ADMIN_URL)
@@ -153,13 +196,31 @@ def redirect_estudante(request):
     return redirect(settings.FRONTEND_ESTUDANTE_URL)
 
 
-# --------------------- TESTE DE AUTENTICAÇÃO ---------------------
+# ==========================================================
+# 🧪 TESTE DE AUTENTICAÇÃO
+# ==========================================================
 class TestAuthView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
+        return Response(
+            {
+                "mensagem": f"Usuário autenticado: {request.user.username}",
+                "is_staff": request.user.is_staff,
+                "is_superuser": request.user.is_superuser,
+            }
+        )
+
+# ==========================================================
+# 👤 PERFIL DO USUÁRIO LOGADO
+# ==========================================================
+class UserProfileView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
         return Response({
-            "mensagem": f"Usuário autenticado: {request.user.username}",
-            "is_staff": request.user.is_staff,
-            "is_superuser": request.user.is_superuser,
-        })
+            "username": user.username,
+            "email": user.email,
+            "is_staff": user.is_staff,
+        }, status=status.HTTP_200_OK)

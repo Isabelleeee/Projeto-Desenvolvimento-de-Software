@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AdminSidebar } from "./components/AdminSidebar";
 import { DashboardPage } from "./components/DashboardPage";
 import { TrilhasPage } from "./components/TrilhasPage";
@@ -7,33 +7,82 @@ import { UsuariosPage } from "./components/UsuariosPage";
 import { RelatoriosPage } from "./components/RelatoriosPage";
 import { ChatIAPage } from "./components/ChatIAPage";
 import { ConfiguracoesPage } from "./components/ConfiguracoesPage";
-import { Menu } from "lucide-react";
+import { Menu, LogOut } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./components/ui/sheet";
+import { Button } from "./components/ui/button";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState('dashboard');
+  const [currentPage, setCurrentPage] = useState("dashboard");
+  const [user, setUser] = useState<any>(null);
 
+  // ===============================
+  // 🔹 Buscar dados do usuário logado
+  // ===============================
+  useEffect(() => {
+    const token = localStorage.getItem("api_token");
+    if (!token) return;
+
+    fetch("http://127.0.0.1:8000/api/user-profile/", {
+      headers: {
+        Authorization: `Token ${token}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setUser(data);
+      })
+      .catch(() => console.error("Erro ao buscar perfil do usuário"));
+  }, []);
+
+  // ===============================
+  // 🚪 Logout
+  // ===============================
+  const handleLogout = async () => {
+    const token = localStorage.getItem("api_token");
+
+    try {
+      if (token) {
+        await fetch("http://127.0.0.1:8000/api/logout/", {
+          method: "POST",
+          headers: { Authorization: `Token ${token}` },
+          credentials: "include",
+        });
+      }
+    } catch (err) {
+      console.error("Erro no logout:", err);
+    } finally {
+      localStorage.removeItem("api_token");
+      window.location.href = "http://localhost:3000/"; // Volta pra tela de login
+    }
+  };
+
+  // ===============================
+  // 📄 Renderização das páginas
+  // ===============================
   const renderPage = () => {
     switch (currentPage) {
-      case 'dashboard':
+      case "dashboard":
         return <DashboardPage />;
-      case 'trilhas':
+      case "trilhas":
         return <TrilhasPage />;
-      case 'categorias':
+      case "categorias":
         return <CategoriasPage />;
-      case 'usuarios':
+      case "usuarios":
         return <UsuariosPage />;
-      case 'relatorios':
+      case "relatorios":
         return <RelatoriosPage />;
-      case 'chat':
+      case "chat":
         return <ChatIAPage />;
-      case 'configuracoes':
+      case "configuracoes":
         return <ConfiguracoesPage />;
       default:
         return <DashboardPage />;
     }
   };
 
+  // ===============================
+  // 🎨 Layout principal
+  // ===============================
   return (
     <div className="min-h-screen bg-[#0A0A1E]">
       {/* Desktop Sidebar */}
@@ -60,14 +109,25 @@ export default function App() {
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="lg:ml-64 p-6 lg:p-8 pt-20 lg:pt-8">
-        <div className="max-w-7xl mx-auto">
-          {renderPage()}
+      {/* Top Bar */}
+      <div className="fixed top-0 right-0 left-0 lg:left-64 z-40 flex items-center justify-start p-4 bg-[#0A0A1E]/80 border-b border-[#A8C5FF]/10 backdrop-blur-md">
+          <div className="text-[#A8C5FF]">
+            {user ? (
+              <p className="text-sm md:text-base">
+                👋 Olá, <strong>{user.username}</strong> ({user.is_staff ? "Administrador" : "Estudante"})
+              </p>
+            ) : (
+              <p className="text-sm text-[#A8C5FF]/60">Carregando usuário...</p>
+            )}
+          </div>
         </div>
+
+      {/* Main Content */}
+      <div className="lg:ml-64 p-6 lg:p-8 pt-24 lg:pt-16">
+        <div className="max-w-7xl mx-auto">{renderPage()}</div>
       </div>
 
-      {/* Background Decoration */}
+      {/* Background Effects */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-[#6A00FF]/20 to-transparent rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-[#002B8E]/20 to-transparent rounded-full blur-3xl" />
