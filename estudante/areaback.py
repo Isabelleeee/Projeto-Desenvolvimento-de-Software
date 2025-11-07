@@ -243,7 +243,7 @@ def gerar_trilha(request):
 
         prompt = f"Monte uma trilha de estudos sobre {tema}, com 5 etapas do básico ao avançado. Cada etapa deve ter um título e uma breve descrição."
 
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-2.5-pro")
         response = model.generate_content(prompt)
 
         return JsonResponse({"trilha": response.text})
