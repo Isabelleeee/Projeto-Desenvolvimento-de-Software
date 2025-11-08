@@ -1,3 +1,4 @@
+# config/urls.py
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
@@ -5,6 +6,7 @@ from django.views import View
 from django.shortcuts import redirect
 from django.conf import settings
 from django.conf.urls.static import static
+from app_principal import views_ia
 
 
 # ===================================================
@@ -52,7 +54,8 @@ urlpatterns = [
     ),
 
     # 🔹 APP PRINCIPAL (login, cadastro, trilhas, IA, etc.)
-    path("", include(("app_principal.urls", "app_principal"), namespace="principal")),
+    path("api/", include(("app_principal.urls", "app_principal"), namespace="principal")),  # ✅ corrigido aqui!
+    path("api/gerar-trilha-ia/", views_ia.GerarTrilhaIAView.as_view(), name="gerar_trilha_ia"),
 
     # 🔹 Redirecionamento dinâmico
     path("", DynamicRedirectView.as_view(), name="home"),

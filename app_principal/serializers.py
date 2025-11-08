@@ -18,17 +18,16 @@ class CategoriaSerializer(serializers.ModelSerializer):
 class EtapaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Etapa
-        fields = ["id", "titulo", "descricao", "ordem"]
+        fields = ["id", "titulo", "descricao", "ordem", "video_url", "conteudo_texto"]
 
 
 class TrilhaSerializer(serializers.ModelSerializer):
     categoria = CategoriaSerializer(read_only=True)
-    etapas = EtapaSerializer(many=True, read_only=True, source="etapa_set")
+    etapas = EtapaSerializer(many=True, read_only=True)  # ✅ corrigido
 
     class Meta:
         model = Trilha
-        fields = ["id", "nome", "descricao", "categoria", "etapas"]
-
+        fields = ["id", "titulo", "descricao", "categoria", "tipo", "etapas"]
 
 class ProgressoSerializer(serializers.ModelSerializer):
     trilha_nome = serializers.CharField(source="trilha.nome", read_only=True)

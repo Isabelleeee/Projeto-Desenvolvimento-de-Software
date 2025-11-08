@@ -65,6 +65,8 @@ class Etapa(models.Model):
     descricao = models.TextField()
     ordem = models.PositiveIntegerField()
     duracao_estimada = models.IntegerField(null=True, blank=True)
+    video_url = models.URLField(null=True, blank=True, help_text="URL do vídeo da etapa (MP4 ou YouTube)")
+    conteudo_texto = models.TextField(null=True, blank=True, help_text="Texto ou resumo da etapa")
 
     class Meta:
         verbose_name_plural = "Etapas"
@@ -72,7 +74,6 @@ class Etapa(models.Model):
 
     def __str__(self):
         return f"{self.trilha.titulo} - Etapa {self.ordem}: {self.titulo}"
-
 
 # ==========================================================
 # 🧾 INSCRIÇÃO

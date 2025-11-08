@@ -6,6 +6,11 @@ Integração completa entre Django (backend) e React (fronts: login 3000, estuda
 from pathlib import Path
 from decouple import config
 import dj_database_url
+from dotenv import load_dotenv
+import os
+
+# Carrega o arquivo .env
+load_dotenv()
 
 # ========================
 # 📁 BASE
@@ -159,6 +164,7 @@ CSRF_TRUSTED_ORIGINS = [
 # ========================
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
+        'rest_framework.authentication.TokenAuthentication',
         "rest_framework.authentication.SessionAuthentication",
     ],
     "DEFAULT_PERMISSION_CLASSES": [
@@ -170,3 +176,5 @@ REST_FRAMEWORK = {
 # ⚙️ PADRÕES
 # ========================
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
