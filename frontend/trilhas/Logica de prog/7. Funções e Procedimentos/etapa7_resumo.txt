@@ -1,0 +1,27 @@
+Etapa 7 — Funções e Procedimentos (Functions and Procedures)
+
+Funções e procedimentos são blocos reutilizáveis que tornam o algoritmo mais modular, limpo e fácil de manter.
+
+📘 Função (Function)
+- Recebe parâmetros e retorna um valor.
+- Exemplo: funcao soma(a, b) retorna a + b
+
+📗 Procedimento (Procedure)
+- Executa ações sem retorno de valor.
+- Exemplo: procedimento mostrar_mensagem(nome)
+
+⚙️ Parâmetros
+- Por valor: recebe uma cópia, o original não muda.
+- Por referência: altera diretamente o valor original.
+
+📏 Escopo
+- Local: variável visível apenas dentro da função.
+- Global: visível em todo o programa (usar com cuidado).
+
+✅ Boas práticas
+- Uma função deve ter uma única responsabilidade.
+- Nomear com clareza (ex: calcular_media).
+- Validar entradas e tratar erros.
+- Testar funções isoladamente (casos normais e limites).
+
+Resumo: Funções e procedimentos permitem modularizar o código, reduzir repetições e facilitar a manutenção, tornando o algoritmo mais eficiente e organizado.

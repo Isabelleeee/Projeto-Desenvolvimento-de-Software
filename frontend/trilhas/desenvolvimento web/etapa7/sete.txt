@@ -1,0 +1,60 @@
+sete
+Guia de Estudo: Fundamentos de Web e Front-end
+
+Este guia oferece uma revisão abrangente dos conceitos fundamentais de desenvolvimento web e front-end, com base nos materiais de aprendizagem fornecidos. Inclui um questionário para testar seus conhecimentos, um gabarito para autoavaliação, um conjunto de questões dissertativas para aprofundamento e um glossário de termos-chave.
+
+Questionário de Respostas Curtas
+
+Instruções: Responda às dez perguntas a seguir em 2 a 3 frases cada para revisar sua compreensão dos conceitos principais.
+
+1. Descreva o processo passo a passo que ocorre quando um usuário acessa um website.
+
+2. O que é o modelo cliente-servidor no contexto da web?
+
+3. Defina "Front-end" e liste três exemplos do que ele engloba.
+
+4. Quais são as principais responsabilidades de um desenvolvedor front-end?
+
+5. Identifique as três tecnologias principais da "Tríade Front-end" e a função principal de cada uma.
+6. Explique a analogia da construção de uma casa em relação a HTML, CSS e JavaScript.
+7. O que é o DOM (Document Object Model) e qual tecnologia o utiliza para manipular uma página?
+8. Defina o conceito de "Responsividade" e explique por que ele é importante.
+9. O que é "Acessibilidade" no desenvolvimento web?
+10. Cite duas ferramentas essenciais para um desenvolvedor front-end iniciante e descreva sua finalidade.
+
+Gabarito
+
+1️⃣ Descreva o processo passo a passo que ocorre quando um usuário acessa um website.
+Quando o usuário digita um endereço no navegador, o navegador envia uma requisição para o servidor onde o site está hospedado. O servidor processa o pedido e devolve os arquivos necessários para montar a página, que o navegador interpreta e exibe para o usuário.
+
+2️⃣ O que é o modelo cliente-servidor no contexto da web?
+É o modelo de comunicação em que o cliente (navegador do usuário) faz requisições e o servidor responde enviando dados. Ele organiza como informações são trocadas na internet.
+
+3️⃣ Defina "Front-end" e liste três exemplos do que ele engloba.
+Front-end é a parte visual e interativa de um site com a qual o usuário interage. Ele engloba elementos como layout, cores, botões, menus, animações e textos.
+
+4️⃣ Quais são as principais responsabilidades de um desenvolvedor front-end?
+Criar interfaces funcionais, responsivas e acessíveis usando HTML, CSS e JavaScript. Também é responsável por garantir uma boa experiência de usuário e compatibilidade com diferentes dispositivos.
+
+5️⃣ Identifique as três tecnologias principais da "Tríade Front-end" e a função principal de cada uma.
+HTML cria a estrutura da página.
+CSS define o estilo visual.
+JavaScript adiciona interatividade e comportamentos dinâmicos.
+
+6️⃣ Explique a analogia da construção de uma casa em relação a HTML, CSS e JavaScript.
+HTML seria a estrutura física da casa (paredes, portas).
+CSS seria a decoração e aparência (pintura, móveis).
+JavaScript seria a parte elétrica e funcional (interruptores, dispositivos inteligentes).
+
+7️⃣ O que é o DOM (Document Object Model) e qual tecnologia o utiliza para manipular uma página?
+O DOM é uma representação em árvore de todos os elementos do HTML exibidos no navegador. O JavaScript utiliza o DOM para alterar conteúdo, estilo e comportamento de uma página em tempo real.
+
+8️⃣ Defina o conceito de "Responsividade" e explique por que ele é importante.
+Responsividade é a capacidade de um site se adaptar a diferentes tamanhos de tela, como celular, tablet ou computador. Ela é importante porque garante boa visualização e usabilidade para todos os usuários.
+
+9️⃣ O que é "Acessibilidade" no desenvolvimento web?
+É o conjunto de práticas para tornar um site utilizável por todas as pessoas, incluindo pessoas com deficiências visuais, motoras ou cognitivas. Isso permite que todos possam navegar e interagir com o conteúdo.
+
+🔟 Cite duas ferramentas essenciais para um desenvolvedor front-end iniciante e descreva sua finalidade.
+Um editor de código, como VS Code, para escrever e organizar os arquivos do projeto.
+Um navegador moderno, como Chrome ou Firefox, para testar e inspecionar as páginas e seus elementos.

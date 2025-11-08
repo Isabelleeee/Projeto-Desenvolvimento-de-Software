@@ -1,0 +1,28 @@
+Etapa 4: Pré-processamento de Dados
+Resumo:
+O pré-processamento foca na limpeza e preparação dos dados.
+limpeza: remove valores ausentes
+padronização das variaveis 
+tratamento de variáveis categoricas
+divisao de conjunto de dados (teste e treino)
+A divisão entre treino e teste é avaliar o desempenho do modelo, um exemplo muito usado é o split hold-out
+Conteúdos extras:
+
+
+
+Perguntas:
+Normalizar os dados serve para:
+ a) Corrigir erros
+ b) Colocar as variáveis na mesma escala ✅
+ c) Criar colunas novas
+ d) Apagar linhas
+A divisão entre treino e teste serve para:
+ a) Reduzir o tempo de execução
+ b) Avaliar o desempenho do modelo ✅
+ c) Criar gráficos
+ d) Codificar variáveis
+ Se 80% dos dados são usados para treino e 20% para teste, isso é um exemplo de:
+ a) Validação cruzada
+ b) Split hold-out ✅
+ c) Regularização
+ d) Normalização

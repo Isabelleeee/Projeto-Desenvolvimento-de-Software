@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "O que é uma equação?",
+        "alternativas": [
+            "A) Uma comparação entre dois números sem igualdade",
+            "B) Uma igualdade matemática que envolve uma incógnita",
+            "C) Um gráfico que mostra a variação de uma função",
+            "D) Uma expressão sem sinal de igualdade"
+        ],
+        "resposta_correta": "B) Uma igualdade matemática que envolve uma incógnita"
+    },
+    {
+        "id": 2,
+        "pergunta": "O que caracteriza uma inequação?",
+        "alternativas": [
+            "A) Um cálculo de porcentagem",
+            "B) Uma igualdade perfeita entre dois lados",
+            "C) Uma relação de desigualdade entre grandezas",
+            "D) Uma expressão sem números"
+        ],
+        "resposta_correta": "C) Uma relação de desigualdade entre grandezas"
+    }
+]

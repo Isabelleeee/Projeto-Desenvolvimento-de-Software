@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 6 - Exercício HTML Semântico + CSS Externo",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual é o objetivo principal deste exercício?",
+      "options": [
+        "Criar uma página HTML básica sem estilos",
+        "Construir uma página com HTML semântico e aplicar um CSS externo",
+        "Aprender apenas sobre o uso de classes no CSS",
+        "Testar diferentes linguagens de programação"
+      ],
+      "answer": "Construir uma página com HTML semântico e aplicar um CSS externo"
+    },
+    {
+      "id": 2,
+      "question": "No CSS, qual seletor é usado para aplicar estilos a um grupo específico de elementos?",
+      "options": [
+        "Tag",
+        "Classe",
+        "ID",
+        "Pseudo-classe"
+      ],
+      "answer": "Classe"
+    }
+  ]
+}

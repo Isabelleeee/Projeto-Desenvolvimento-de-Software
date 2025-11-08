@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Para que serve a Regra de Três?",
+        "alternativas": [
+            "A) Para comparar números sem relação entre si",
+            "B) Para descobrir valores proporcionais entre grandezas",
+            "C) Para calcular apenas descontos",
+            "D) Para somar grandezas de tipos diferentes"
+        ],
+        "resposta_correta": "B) Para descobrir valores proporcionais entre grandezas"
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual das opções abaixo é um exemplo de uso da porcentagem?",
+        "alternativas": [
+            "A) Calcular o preço final de um produto com desconto de 20%",
+            "B) Somar dois números inteiros",
+            "C) Converter horas em minutos",
+            "D) Medir a área de um triângulo"
+        ],
+        "resposta_correta": "A) Calcular o preço final de um produto com desconto de 20%"
+    }
+]

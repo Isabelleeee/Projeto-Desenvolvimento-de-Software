@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 1 - Fundamentos da Web e Introdução ao Front-end",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual é a tríade principal do desenvolvimento Front-end?",
+      "options": [
+        "HTML, CSS e JavaScript",
+        "Python, Java e C++",
+        "HTML, PHP e SQL",
+        "CSS, React e Node.js"
+      ],
+      "answer": "HTML, CSS e JavaScript"
+    },
+    {
+      "id": 2,
+      "question": "Qual é a principal função do desenvolvedor Front-end?",
+      "options": [
+        "Gerenciar o banco de dados do site",
+        "Cuidar apenas da parte lógica do servidor",
+        "Transformar o design em páginas interativas",
+        "Criar servidores e APIs"
+      ],
+      "answer": "Transformar o design em páginas interativas"
+    }
+  ]
+}

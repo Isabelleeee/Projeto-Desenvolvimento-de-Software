@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Qual é a ordem correta para resolver uma expressão numérica?",
+        "alternativas": [
+            "A) Adição, subtração, multiplicação e divisão",
+            "B) Multiplicação e divisão antes da adição e subtração, respeitando parênteses, colchetes e chaves",
+            "C) Sempre da esquerda para a direita",
+            "D) Começar pelas somas e terminar com as potências"
+        ],
+        "resposta_correta": "B) Multiplicação e divisão antes da adição e subtração, respeitando parênteses, colchetes e chaves"
+    },
+    {
+        "id": 2,
+        "pergunta": "Por que é importante seguir a ordem das operações em uma expressão numérica?",
+        "alternativas": [
+            "A) Porque facilita decorar as fórmulas",
+            "B) Porque garante resultados corretos e evita erros de cálculo",
+            "C) Porque é a forma mais rápida de fazer contas grandes",
+            "D) Porque é obrigatória apenas em provas"
+        ],
+        "resposta_correta": "B) Porque garante resultados corretos e evita erros de cálculo"
+    }
+]

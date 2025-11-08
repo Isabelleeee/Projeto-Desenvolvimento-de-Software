@@ -1,0 +1,18 @@
+Etapa 1 — Introdução a Algoritmos e Pseudocódigo
+
+Um algoritmo é uma sequência finita e ordenada de passos que descrevem como resolver um problema. 
+Ele é o coração da programação e pode ser representado em linguagem natural, fluxogramas, pseudocódigo ou código real.
+
+O pseudocódigo é uma forma textual e estruturada de expressar a lógica de um algoritmo, servindo como ponte entre o raciocínio lógico e a programação. 
+Ele usa instruções simples e palavras intuitivas como “leia”, “escreva” e “se ... então ...”. 
+
+Características essenciais de um algoritmo:
+- Finitude: deve terminar após um número limitado de passos.
+- Definição: cada instrução deve ser clara.
+- Entrada e saída: recebe dados e gera resultados.
+- Efetividade: cada passo deve ser executável.
+
+Um bom pseudocódigo é organizado, legível e utiliza indentação, nomes significativos e comentários. 
+Seu formato básico inclui declaração de variáveis, processamento e exibição dos resultados.
+
+Essa etapa ensina a pensar de forma lógica e estruturada — o primeiro passo para qualquer pessoa que deseja aprender a programar.

@@ -1,0 +1,110 @@
+etapa 1
+resumo: O texto apresenta uma introdução abrangente aos fundamentos do desenvolvimento web e Front-end, definindo o que é a web e explicando seu funcionamento através do modelo cliente-servidor. Ele esclarece que o Front-end compreende toda a parte visual e de interação de um site, detalhando as responsabilidades do desenvolvedor Front-end. A fonte enfatiza a Tríade do Front-end, que consiste em HTML (estrutura), CSS (aparência visual) e JavaScript (interatividade e lógica), comparando-as à construção de uma casa. Por fim, são listadas ferramentas essenciais e conceitos importantes como DOM, responsividade e acessibilidade.
+
+✅ ETAPA 1 — Fundamentos da Web e Introdução ao Front-end
+🎯 Objetivo da Etapa
+
+Aprender os conceitos básicos do desenvolvimento Front-end:
+como a web funciona, o que o desenvolvedor front-end faz,
+e a importância do HTML, CSS e JavaScript para construção de sites.
+
+🌐 O que é a Web?
+
+A Web é um conjunto de páginas acessadas por meio de navegadores pela internet.
+Essas páginas são criadas com HTML + CSS + JavaScript.
+
+Quando acessamos um site:
+
+digitamos um endereço (URL)
+
+o navegador envia um pedido até um servidor
+
+o servidor devolve os arquivos do site
+
+o navegador interpreta e exibe para o usuário
+
+📌 Navegadores: Chrome, Firefox, Edge, Safari
+📌 Tudo parte do modelo cliente-servidor
+
+Cliente = quem acessa o site (usuário)
+
+Servidor = computador onde os arquivos do site ficam guardados
+
+🎨 O que é Front-end?
+
+Front-end é toda a parte visual de um site e como o usuário interage com ele.
+
+👉 Exemplos do que faz parte do Front-end:
+
+Títulos, textos, imagens
+
+Botões, menus e formulários
+
+Cores, animações e design
+
+Responsividade (funcionar bem em celular, tablet e PC)
+
+Acessibilidade (pessoas com necessidades especiais conseguirem usar)
+
+📌 É o que transforma um layout em uma experiência real para o usuário.
+
+👩‍💻 O que faz um Desenvolvedor Front-end?
+
+O desenvolvedor front-end é responsável por:
+
+✔ Estruturar o conteúdo com HTML
+✔ Criar o visual (cores, tamanhos, formas) com CSS
+✔ Criar interações e ações com JavaScript
+✔ Garantir que o site funcione em telas de diferentes tamanhos
+✔ Melhorar o desempenho para carregar mais rápido
+✔ Tornar o site acessível para todos
+
+Ele traduz design + funcionalidade em uma página interativa.
+
+🧩 As 3 Tecnologias Principais (Tríade do Front-end)
+Tecnologia	O que faz?	Exemplos
+HTML	Estrutura e conteúdo da página	Títulos, textos, imagens, botões
+CSS	Aparência visual e layout	Cores, tamanhos, fontes, posições
+JavaScript	Interatividade e lógica	Menus que abrem, animações, validações
+
+📌 É como construir uma casa:
+
+HTML = tijolos e estrutura
+
+CSS = pintura, decoração e organização
+
+JS = eletricidade, portas automáticas, vida à casa
+
+🛠️ Ferramentas essenciais para começar
+Ferramenta	Para que serve
+VS Code	Escrever o código
+Navegador	Testar e visualizar o site
+Inspecionar elemento	Analisar o código e corrigir erros
+Sites de prática	CodePen, W3Schools, FreeCodeCamp
+💡 Extra: Conceitos importantes
+
+DOM (Document Object Model): estrutura da página que o JavaScript manipula
+
+Responsividade: site se adapta ao tamanho da tela
+
+Acessibilidade: permitir que todos utilizem, inclusive pessoas com deficiência
+
+Boas práticas: código limpo, organizado e com comentários
+
+✅ O que você entenderá ao final da Etapa 1
+
+✔ Como a Web entrega páginas ao usuário
+✔ O que é Front-end e sua importância
+✔ Diferenças entre HTML, CSS e JavaScript
+✔ O papel e responsabilidades do desenvolvedor front-end
+✔ Conhecimento básico das ferramentas necessárias
+
+Se quiser, posso complementar com:
+
+✅ Questões para revisar o conteúdo
+✅ Uma imagem resumindo o fluxo da web
+✅ Exercício de pesquisa guiada
+✅ Material para colocar no slide do trabalho
+
+
+

@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Qual biblioteca do Python é usada para gerar números aleatórios?",
+        "alternativas": [
+            "A) math",
+            "B) random",
+            "C) numpy",
+            "D) operator"
+        ],
+        "resposta_correta": "B) random"
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual é a principal diferença entre as bibliotecas NumPy e Pandas?",
+        "alternativas": [
+            "A) NumPy trabalha com tabelas e Pandas com matrizes",
+            "B) NumPy é usada para gráficos e Pandas para cálculos",
+            "C) NumPy trabalha com matrizes numéricas e Pandas com tabelas de dados",
+            "D) Ambas são usadas apenas para gerar números aleatórios"
+        ],
+        "resposta_correta": "C) NumPy trabalha com matrizes numéricas e Pandas com tabelas de dados"
+    }
+]

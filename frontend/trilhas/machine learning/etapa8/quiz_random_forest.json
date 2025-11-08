@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "O que compõe o modelo Random Forest?",
+        "alternativas": [
+            "A) Uma única árvore de decisão",
+            "B) Muitas árvores de decisão",
+            "C) Um modelo linear simples",
+            "D) Apenas dados categóricos"
+        ],
+        "resposta_correta": "B) Muitas árvores de decisão"
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual é uma desvantagem do Random Forest?",
+        "alternativas": [
+            "A) Baixa precisão",
+            "B) Maior custo computacional",
+            "C) Pouco uso de dados",
+            "D) Dificuldade em interpretar uma árvore individual"
+        ],
+        "resposta_correta": "B) Maior custo computacional"
+    }
+]

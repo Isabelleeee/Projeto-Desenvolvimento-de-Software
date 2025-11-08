@@ -1,0 +1,15 @@
+Etapa 3 — Operadores e Expressões
+
+Os operadores permitem realizar cálculos, comparações e combinações lógicas em algoritmos. 
+As expressões utilizam operadores junto com variáveis e constantes para gerar resultados. 
+Dominar operadores é essencial para entender como o computador processa decisões e cálculos.
+
+Tipos principais de operadores:
+1. Aritméticos: realizam operações matemáticas (+, -, *, /, %).
+2. Relacionais: comparam valores e retornam verdadeiro ou falso (=, <>, >, <, >=, <=).
+3. Lógicos: combinam condições booleanas (e, ou, nao).
+
+A precedência define a ordem de execução das operações: parênteses → multiplicação/divisão → adição/subtração. 
+O uso de parênteses ajuda a evitar erros de lógica.
+
+As expressões podem ser aritméticas, relacionais ou lógicas, sendo essenciais para construir condições e cálculos nos algoritmos.

@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 8 - Tabela Hash",
+  "questions": [
+    {
+      "id": 1,
+      "question": "O que é a função hash?",
+      "options": [
+        "Um tipo de lista",
+        "Um algoritmo que gera um índice",
+        "Um método de ordenação",
+        "Um ponteiro de memória"
+      ],
+      "answer": "Um algoritmo que gera um índice"
+    },
+    {
+      "id": 2,
+      "question": "O que ocorre quando duas chaves geram o mesmo índice?",
+      "options": [
+        "Rehash",
+        "Inserção duplicada",
+        "Colisão",
+        "Compressão"
+      ],
+      "answer": "Colisão"
+    }
+  ]
+}

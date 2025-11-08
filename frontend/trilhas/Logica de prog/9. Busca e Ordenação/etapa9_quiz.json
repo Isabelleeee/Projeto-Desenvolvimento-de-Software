@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 9 — Busca e Ordenação (Searching and Sorting)",
+  "questions": [
+    {
+      "id": 1,
+      "question": "A busca binária só pode ser usada quando:",
+      "options": [
+        "A lista é pequena",
+        "A lista está ordenada",
+        "O vetor está invertido",
+        "Há valores duplicados"
+      ],
+      "answer": "A lista está ordenada"
+    },
+    {
+      "id": 2,
+      "question": "O algoritmo mais simples, porém mais lento para ordenar, é:",
+      "options": [
+        "Quick Sort",
+        "Merge Sort",
+        "Bubble Sort",
+        "Insertion Sort"
+      ],
+      "answer": "Bubble Sort"
+    }
+  ]
+}

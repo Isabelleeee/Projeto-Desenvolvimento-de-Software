@@ -1,0 +1,30 @@
+Etapa 11: Bibliotecas e Próximos Passos
+Resumo:
+ Principais ferramentas para ML em Python: scikit-learn, pandas, NumPy, matplotlib.
+ Após dominar o básico, avance para Deep Learning (TensorFlow, PyTorch).
+scikitlearn: mais usada para o ML básico, usada para treinamento de modelo
+pandas: necessaria para a manipulação de dados 
+numpy: operações numéricas e array
+matplolib: visualização dos dados
+Conteúdos extras:
+
+
+
+Perguntas:
+
+
+ Biblioteca mais usada para ML básico:
+ a) TensorFlow
+ b) scikit-learn ✅
+ c) OpenCV
+ d) NumPy
+Pandas é usada para:
+ a) Visualização
+ b) Manipulação de dados ✅
+ c) Treinamento de modelos
+ d) Criação de redes neurais
+O próximo passo lógico após ML clássico é:
+ a) Programação de sistemas
+ b) Deep Learning ✅
+ c) SQL
+ d) Modelagem estatística

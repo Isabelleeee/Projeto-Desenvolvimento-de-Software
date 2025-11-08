@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 2 — Tipos de Dados e Variáveis",
+  "questions": [
+    {
+      "id": 1,
+      "question": "O que é uma variável?",
+      "options": [
+        "Um número fixo",
+        "Um espaço na memória que armazena um valor",
+        "Uma constante",
+        "Um tipo de dado lógico"
+      ],
+      "answer": "Um espaço na memória que armazena um valor"
+    },
+    {
+      "id": 2,
+      "question": "Qual comando é usado para entrada de dados em pseudocódigo?",
+      "options": [
+        "escreva",
+        "leia",
+        "input",
+        "print"
+      ],
+      "answer": "leia"
+    }
+  ]
+}

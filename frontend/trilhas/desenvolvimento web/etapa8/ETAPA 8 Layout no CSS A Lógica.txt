@@ -1,0 +1,69 @@
+✅ ETAPA 8 — Layout no CSS: A Lógica de Caixas e Exibição dos Elementos
+
+O desenvolvimento de interfaces modernas exige bem mais do que cores e tipografia. Para organizar tudo na página e criar um visual coerente, é necessário aprender como os elementos se comportam como blocos dentro do espaço do navegador. Essa estrutura é baseada no chamado Box Model — um dos conceitos mais fundamentais do CSS.
+
+Todos os elementos HTML são tratados como caixas retangulares, e o CSS permite controlar exatamente como essas caixas se posicionam, se alinham e se relacionam entre si. Entender essa dinâmica é essencial para desenvolver sites profissionais.
+
+📦 O Box Model: A base de tudo
+
+Cada elemento visível na tela é composto por quatro camadas:
+
+Conteúdo: o que realmente aparece (texto, imagem etc.)
+
+Padding: espaço interno entre o conteúdo e a borda
+
+Border: contorno ao redor do padding
+
+Margin: espaço externo, que separa um elemento do outro
+
+Quando o desenvolvedor ajusta essas camadas, ele controla toda a organização da página, definindo onde os elementos se encaixam visualmente.
+
+🧩 Tipos de exibição: Display
+
+O CSS controla como uma caixa se comporta na linha ou no bloco usando a propriedade display. Os principais tipos iniciais são:
+
+block: ocupa toda a largura disponível e quebra a linha (ex.: <div>, <section>, <h1>)
+
+inline: ocupa apenas o espaço necessário e não quebra linha (ex.: <span>, <a>)
+
+inline-block: mistura dos dois: pode ter altura e largura, sem quebra de linha
+
+none: oculta completamente o elemento
+
+Esse controle define o fluxo dos elementos na página e permite construir layouts personalizados.
+
+🎯 Alinhamento e posicionamento básico
+
+Elementos podem ser alinhados no centro, à esquerda ou à direita com propriedades simples, como text-align ou margens automáticas. Além disso, o CSS oferece técnicas modernas para organização de layout, como Flexbox e Grid, que serão aprofundadas nas próximas etapas.
+
+Aqui, o foco é compreender que:
+
+cada elemento ocupa um espaço próprio
+
+o desenvolvedor controla esse espaço
+
+a relação entre elementos define como a página se comporta visualmente
+
+Sem domínio dessa lógica, qualquer layout mais complexo se torna difícil.
+
+🧠 Por que dominar isso agora?
+
+Porque as próximas fases do CSS envolvem:
+
+distribuição inteligente dos elementos na página
+
+criação de menus, seções e colunas
+
+sites totalmente ajustáveis a telas diferentes
+
+O layout é o ponto em que o design começa realmente a tomar forma. O que antes era apenas texto com cores agora se transforma em estrutura responsiva e organizada.
+
+✅ O que você será capaz de fazer após esta etapa
+
+Criar layouts com aparência profissional
+
+Controlar áreas de conteúdo com precisão
+
+Alinhar, agrupar e distribuir elementos com lógica
+
+Preparar bases para Flexbox, Grid e responsividade total

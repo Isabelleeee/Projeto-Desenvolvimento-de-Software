@@ -1,0 +1,13 @@
+Resumo – Tabelas Hash
+Uma tabela hash guarda dados em pares chave-valor e usa uma função hash para transformar a chave em um índice do array, permitindo acesso muito rápido.
+Se duas chaves geram o mesmo índice (colisão), isso é resolvido por:
+
+
+Encadeamento separado: cada posição guarda uma lista encadeada.
+
+
+Endereçamento aberto: busca a próxima posição livre no array.
+
+
+Quando bem implementada, faz busca, inserção e remoção em O(1).
+Usada em dicionários, bancos de dados, caches e verificação de duplicatas, é ideal quando se precisa de acesso instantâneo aos dados por uma chave única.

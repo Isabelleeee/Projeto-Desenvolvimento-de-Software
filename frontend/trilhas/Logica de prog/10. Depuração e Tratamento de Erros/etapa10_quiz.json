@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 10 — Depuração e Tratamento de Erros (Debugging and Error Handling)",
+  "questions": [
+    {
+      "id": 1,
+      "question": "O que significa depurar (debugging)?",
+      "options": [
+        "Compilar o programa",
+        "Executar o código",
+        "Encontrar e corrigir erros",
+        "Apagar variáveis"
+      ],
+      "answer": "Encontrar e corrigir erros"
+    },
+    {
+      "id": 2,
+      "question": "Qual estrutura é usada para capturar erros durante a execução?",
+      "options": [
+        "repita/até",
+        "tente/capture",
+        "para/enquanto",
+        "inicie/fim"
+      ],
+      "answer": "tente/capture"
+    }
+  ]
+}

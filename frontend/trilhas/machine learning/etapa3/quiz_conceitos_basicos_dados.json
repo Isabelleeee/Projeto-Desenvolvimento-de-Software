@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "O que representa cada coluna de um conjunto de dados (dataset)?",
+        "alternativas": [
+            "A) Uma amostra",
+            "B) Uma feature (característica)",
+            "C) Uma tabela completa",
+            "D) O resultado previsto"
+        ],
+        "resposta_correta": "B) Uma feature (característica)"
+    },
+    {
+        "id": 2,
+        "pergunta": "O que é a variável-alvo (target) em um conjunto de dados?",
+        "alternativas": [
+            "A) O identificador do conjunto de dados",
+            "B) A variável que queremos prever",
+            "C) Uma feature constante",
+            "D) O ruído dos dados"
+        ],
+        "resposta_correta": "B) A variável que queremos prever"
+    }
+]

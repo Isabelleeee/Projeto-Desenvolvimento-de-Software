@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "O que é overfitting em um modelo de Machine Learning?",
+        "alternativas": [
+            "A) Quando o modelo aprende demais, incluindo ruídos dos dados",
+            "B) Quando o modelo não aprende nada",
+            "C) Quando o modelo generaliza perfeitamente",
+            "D) Quando o modelo usa pouca regularização"
+        ],
+        "resposta_correta": "A) Quando o modelo aprende demais, incluindo ruídos dos dados"
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual métrica mede a proporção de acertos em um modelo de classificação?",
+        "alternativas": [
+            "A) Precisão",
+            "B) Recall",
+            "C) Acurácia",
+            "D) F1-score"
+        ],
+        "resposta_correta": "C) Acurácia"
+    }
+]

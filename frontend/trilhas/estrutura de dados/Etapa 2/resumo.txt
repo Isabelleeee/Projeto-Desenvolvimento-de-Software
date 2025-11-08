@@ -1,0 +1,10 @@
+Listas Encadeadas
+As listas encadeadas funcionam como uma corrente de nós conectados por ponteiros, onde cada nó guarda um dado e o endereço do próximo. Diferente dos arrays, seus elementos não ficam lado a lado na memória. Existem três tipos principais:
+
+Simplesmente encadeada: só segue em uma direção.
+
+Duplamente encadeada: permite ir e voltar entre os nós.
+
+Circular: o último nó aponta de volta para o primeiro, formando um ciclo.
+
+São ideais quando é preciso inserir ou remover elementos com frequência, pois essas operações são rápidas e o tamanho da lista é flexível. No entanto, o acesso a um elemento específico é mais lento, pois é necessário percorrer a lista até encontrá-lo. São usadas em históricos de navegação, playlists, listas de tarefas e na implementação de pilhas, filas e tabelas hash.

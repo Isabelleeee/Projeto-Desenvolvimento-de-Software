@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 5 — Estruturas de Repetição (Loops)",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual das estruturas testa a condição após executar o bloco?",
+      "options": [
+        "enquanto",
+        "para",
+        "repita...ate",
+        "saia"
+      ],
+      "answer": "repita...ate"
+    },
+    {
+      "id": 2,
+      "question": "Qual é a estrutura mais indicada quando sabemos o número de repetições?",
+      "options": [
+        "enquanto",
+        "repita...ate",
+        "para",
+        "escolha"
+      ],
+      "answer": "para"
+    }
+  ]
+}

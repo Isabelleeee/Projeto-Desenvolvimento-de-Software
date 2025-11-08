@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Para que serve a normalização dos dados no pré-processamento?",
+        "alternativas": [
+            "A) Corrigir erros",
+            "B) Colocar as variáveis na mesma escala",
+            "C) Criar colunas novas",
+            "D) Apagar linhas"
+        ],
+        "resposta_correta": "B) Colocar as variáveis na mesma escala"
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual é o objetivo da divisão entre treino e teste?",
+        "alternativas": [
+            "A) Reduzir o tempo de execução",
+            "B) Avaliar o desempenho do modelo",
+            "C) Criar gráficos",
+            "D) Codificar variáveis"
+        ],
+        "resposta_correta": "B) Avaliar o desempenho do modelo"
+    }
+]

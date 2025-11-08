@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 1 — Introdução a Algoritmos e Pseudocódigo",
+  "questions": [
+    {
+      "id": 1,
+      "question": "O que é um algoritmo?",
+      "options": [
+        "Um conjunto de passos lógicos e finitos para resolver um problema",
+        "Uma linguagem de programação",
+        "Um fluxograma colorido",
+        "Um programa pronto para execução"
+      ],
+      "answer": "Um conjunto de passos lógicos e finitos para resolver um problema"
+    },
+    {
+      "id": 2,
+      "question": "O que caracteriza o pseudocódigo?",
+      "options": [
+        "É uma forma textual e estruturada de descrever algoritmos",
+        "É executado por qualquer computador",
+        "É usado apenas em linguagens de alto nível",
+        "É um tipo de fluxograma"
+      ],
+      "answer": "É uma forma textual e estruturada de descrever algoritmos"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+Resumo – Filas (Queue)
+Uma fila segue o princípio FIFO (First In, First Out): o primeiro a entrar é o primeiro a sair — como uma fila de supermercado. Os principais comandos são: enqueue() (adiciona no final), dequeue() (remove do início), front() (olha o primeiro da fila) e isEmpty() (verifica se está vazia).
+
+Existem variações:
+
+Fila simples: entrada no fim e saída no início.
+
+Circular: reaproveita espaços vazios.
+
+De prioridade: atende os mais importantes primeiro.
+
+Deque: permite inserir e remover nas duas pontas.
+
+As operações principais são rápidas (O(1)) e a estrutura é usada em filas de impressão, processamento de pedidos, chamadas de call center, tráfego de rede e escalonamento de processos em sistemas operacionais.
+👉 Regra de ouro: entra por um lado, sai pelo outro — sem pular a vez!

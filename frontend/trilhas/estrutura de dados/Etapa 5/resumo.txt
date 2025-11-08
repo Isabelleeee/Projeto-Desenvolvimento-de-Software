@@ -1,0 +1,17 @@
+Resumo – Árvores em Estruturas de Dados
+As árvores são estruturas hierárquicas que organizam dados como uma árvore genealógica: cada nó tem um pai (exceto a raiz) e pode ter filhos. A raiz é o topo da estrutura, e as folhas são os nós sem descendentes.
+
+Os principais tipos são:
+
+Árvore Binária: cada nó tem até dois filhos.
+
+BST (Árvore Binária de Busca): à esquerda ficam valores menores, à direita maiores — ideal para buscas rápidas (O(log n)).
+
+Árvores Balanceadas (AVL, Rubro-Negra): se autoajustam para manter desempenho estável.
+
+Heap: usada em filas de prioridade, com o maior (ou menor) elemento na raiz.
+
+A travessia pode ser pré-ordem (raiz→esquerda→direita), em-ordem (esquerda→raiz→direita) ou pós-ordem (esquerda→direita→raiz).
+
+São úteis em sistemas de arquivos, bancos de dados, compiladores, redes e IA, pois permitem buscas e organização rápidas.
+👉 Pense nelas como um organizador inteligente que estrutura dados de forma lógica e eficiente.

@@ -1,0 +1,21 @@
+🧠 Resumo — Etapa 10: Construindo Seu Primeiro Site Completo (HTML + CSS + JavaScript + API)
+
+Nesta etapa final, você consolida tudo o que aprendeu em um projeto completo, aplicando HTML, CSS e JavaScript juntos para criar um site funcional e visualmente atraente.
+
+O projeto EstudAI une estrutura, estilo e interatividade:
+
+O HTML define a base semântica e acessível com seções bem organizadas (Home, Sobre e Curiosidades).
+
+O CSS dá identidade visual, aplicando cores, espaçamentos e layout responsivo.
+
+O JavaScript traz vida à página, permitindo interações dinâmicas e a integração com uma API real — a Cat Facts API, que retorna curiosidades sobre gatos.
+
+Com isso, você domina a lógica essencial do desenvolvimento front-end moderno, conectando o usuário a dados externos em tempo real.
+Esse projeto marca o ponto em que teoria e prática se unem, transformando o aprendizado em um site completo e digno de portfólio.
+
+Ao final, você é capaz de:
+✔ Estruturar páginas com HTML semântico
+✔ Estilizar e organizar layouts com CSS
+✔ Criar interatividade e eventos com JavaScript
+✔ Consumir APIs públicas com fetch()
+✔ Entregar uma experiência completa de navegação

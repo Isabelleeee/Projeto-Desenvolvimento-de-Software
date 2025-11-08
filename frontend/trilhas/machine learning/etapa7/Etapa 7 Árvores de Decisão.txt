@@ -1,0 +1,23 @@
+Etapa 7: Árvores de Decisão
+Resumo:
+ As Árvores de Decisão tomam decisões baseadas em divisões simples dos dados. São intuitivas e usadas em classificação e regressão.
+As árvores são do princípio “se/então”. Um nó-folha dentro da árvore é o que representa a decisão final. 
+Um critério utilizado no algoritmo de árvores de decisão é o critério gini, que calcula a pureza de um nó.
+Conteúdos extras:
+
+Perguntas:
+Árvores de decisão usam:
+ a) Regras “se/então” ✅
+ b) Funções exponenciais
+ c) Logaritmos
+ d) Redes neurais
+Um nó folha representa:
+ a) Um dado bruto
+ b) Uma decisão final ✅
+ c) Uma entrada
+ d) O erro
+O critério Gini é usado para:
+ a) Calcular a pureza de um nó ✅
+ b) Dividir o dataset
+ c) Calcular média
+ d) Regularizar pesos

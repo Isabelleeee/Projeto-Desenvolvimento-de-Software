@@ -1,0 +1,39 @@
+Etapa 10 — Depuração e Tratamento de Erros (Debugging and Error Handling)
+
+Depuração e tratamento de erros são etapas fundamentais no desenvolvimento de programas confiáveis.
+
+🐞 Depuração (Debugging)
+Processo de identificar, entender e corrigir erros no código.
+Tipos de erros:
+1. Sintaxe: erro de escrita que impede a execução (ex: esquecer “então”).
+2. Execução: ocorre durante a execução (ex: divisão por zero).
+3. Lógico: resultado incorreto sem gerar erro.
+
+🔧 Técnicas de Depuração
+- Leitura de código e revisão (code review)
+- Mensagens de log (escreva/print)
+- Execução passo a passo (depurador da IDE)
+- Pontos de interrupção (breakpoints)
+- Inspeção de variáveis (watch/inspect)
+
+💬 Logs
+- Ajudam a rastrear o comportamento interno do programa.
+- Use níveis de log (info, warning, error).
+- Remova logs desnecessários antes da entrega.
+
+⚠️ Tratamento de Erros
+Conjunto de técnicas para evitar que o programa trave diante de falhas.
+Estrutura genérica:
+tente
+  resultado ← dividir(a, b)
+capture erro
+  escreva("Ocorreu um erro:", erro)
+fimtente
+
+✅ Boas Práticas
+- Validar entradas antes de processar.
+- Exibir mensagens amigáveis.
+- Usar valores padrão em caso de erro.
+- Registrar erros para futura análise.
+
+Resumo: Depuração encontra e corrige problemas; tratamento de erros impede falhas críticas e melhora a experiência do usuário.

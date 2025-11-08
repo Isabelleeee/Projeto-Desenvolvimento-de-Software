@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "O que significa a operação de potenciação?",
+        "alternativas": [
+            "A) Dividir um número várias vezes",
+            "B) Multiplicar um número por ele mesmo várias vezes",
+            "C) Somar um número com outro número",
+            "D) Subtrair um número de outro"
+        ],
+        "resposta_correta": "B) Multiplicar um número por ele mesmo várias vezes"
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual operação é o inverso da potenciação?",
+        "alternativas": [
+            "A) Adição",
+            "B) Subtração",
+            "C) Radiciação",
+            "D) Multiplicação"
+        ],
+        "resposta_correta": "C) Radiciação"
+    }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "A regressão logística é usada para qual tipo de problema?",
+        "alternativas": [
+            "A) Regressão contínua",
+            "B) Classificação",
+            "C) Clustering",
+            "D) Predição numérica"
+        ],
+        "resposta_correta": "B) Classificação"
+    },
+    {
+        "id": 2,
+        "pergunta": "O que a função sigmoide faz na regressão logística?",
+        "alternativas": [
+            "A) Gera números entre 0 e 1, representando probabilidades",
+            "B) Calcula médias dos dados",
+            "C) Separa os dados em grupos fixos",
+            "D) Aumenta o valor das variáveis"
+        ],
+        "resposta_correta": "A) Gera números entre 0 e 1, representando probabilidades"
+    }
+]

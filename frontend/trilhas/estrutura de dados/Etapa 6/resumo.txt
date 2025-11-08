@@ -1,0 +1,11 @@
+Resumo – Heaps (Árvores de Montículo)
+Um heap é uma árvore binária completa usada para organizar elementos por prioridade. Ele pode ser:
+
+Max-Heap: o pai é sempre maior que os filhos (maior valor na raiz).
+
+Min-Heap: o pai é sempre menor que os filhos (menor valor na raiz).
+
+Essas estruturas são armazenadas de forma eficiente em arrays, usando fórmulas simples para encontrar pais e filhos. As principais operações — inserção e remoção da raiz — têm complexidade O(log n), enquanto a criação de um heap (heapify) é O(n).
+
+Heaps são muito usados em filas de prioridade, ordenação com Heap Sort, algoritmos de grafos (Dijkstra, Prim) e sistemas que precisam escolher rapidamente o maior ou menor elemento.
+👉 Pense no heap como uma fila inteligente, onde o elemento mais importante está sempre no topo.

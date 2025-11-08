@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 4 - Exercícios Práticos de HTML",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual é o objetivo principal dos exercícios desta etapa?",
+      "options": [
+        "Aprender na prática o funcionamento dos comandos HTML",
+        "Decorar todas as tags HTML",
+        "Aprender sobre CSS e JavaScript",
+        "Criar sites profissionais completos"
+      ],
+      "answer": "Aprender na prática o funcionamento dos comandos HTML"
+    },
+    {
+      "id": 2,
+      "question": "Qual tag é usada para criar uma lista ordenada (numerada)?",
+      "options": [
+        "<ul>",
+        "<ol>",
+        "<li>",
+        "<list>"
+      ],
+      "answer": "<ol>"
+    }
+  ]
+}

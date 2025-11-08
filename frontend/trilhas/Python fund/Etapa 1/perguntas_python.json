@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Quem criou a linguagem Python e em que ano ela foi lançada?",
+        "alternativas": [
+            "A) Elon Musk, em 2005",
+            "B) Guido van Rossum, em 1991",
+            "C) Linus Torvalds, em 1989",
+            "D) James Gosling, em 1995"
+        ],
+        "resposta_correta": "B) Guido van Rossum, em 1991"
+    },
+    {
+        "id": 2,
+        "pergunta": "Por que o Python é considerado uma linguagem interpretada?",
+        "alternativas": [
+            "A) Porque precisa ser compilada antes da execução",
+            "B) Porque o código é traduzido e executado linha por linha",
+            "C) Porque usa apenas números inteiros",
+            "D) Porque só funciona em sistemas Linux"
+        ],
+        "resposta_correta": "B) Porque o código é traduzido e executado linha por linha"
+    }
+]

@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 6 - Heap",
+  "questions": [
+    {
+      "id": 1,
+      "question": "No Max-Heap, qual elemento fica na raiz?",
+      "options": [
+        "O menor",
+        "O maior",
+        "O último inserido",
+        "Um valor aleatório"
+      ],
+      "answer": "O maior"
+    },
+    {
+      "id": 2,
+      "question": "Qual é a complexidade média para inserir um elemento em um heap?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)"
+    }
+  ]
+}

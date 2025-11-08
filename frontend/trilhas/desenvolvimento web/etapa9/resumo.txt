@@ -1,0 +1,15 @@
+🧠 Resumo — Fundamentos do Front-end
+
+O Front-end é a parte do desenvolvimento web responsável por tudo o que o usuário vê e interage em um site ou aplicativo.
+Ele combina três tecnologias essenciais:
+
+HTML: cria a estrutura do conteúdo (títulos, textos, imagens, botões).
+
+CSS: define o estilo visual (cores, tamanhos, layout, espaçamento).
+
+JavaScript: adiciona interatividade e comportamentos dinâmicos (menus, animações, validações).
+
+O desenvolvedor front-end transforma o design em uma experiência real, garantindo que o site funcione em diferentes dispositivos (responsividade) e seja acessível a todos os usuários.
+Ele também utiliza ferramentas como VS Code, navegadores e inspecionadores de código para criar, testar e ajustar suas páginas.
+
+👉 Em resumo, o front-end é onde a tecnologia encontra o design, unindo funcionalidade, estética e usabilidade.

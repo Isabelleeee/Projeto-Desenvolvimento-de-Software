@@ -1,0 +1,31 @@
+Etapa 9 — Busca e Ordenação (Searching and Sorting)
+
+A busca e a ordenação são operações essenciais em algoritmos, usadas para localizar e organizar dados.
+
+🔍 Busca
+1. Busca Linear: percorre todos os elementos até encontrar o valor desejado.
+   - Vantagem: simples e funciona para listas não ordenadas.
+   - Desvantagem: lenta para listas grandes (O(n)).
+
+2. Busca Binária: divide a lista ordenada ao meio a cada passo.
+   - Vantagem: muito rápida (O(log n)).
+   - Desvantagem: requer lista previamente ordenada.
+
+📈 Ordenação
+1. Bubble Sort: troca elementos vizinhos fora de ordem.
+   - Simples, mas lento (O(n²)).
+2. Selection Sort: busca o menor elemento e o move para a posição correta.
+   - Poucas trocas, mas também O(n²).
+3. Insertion Sort: insere elementos na posição correta.
+   - Ideal para listas pequenas ou quase ordenadas.
+4. Merge Sort: divide e conquista, ordenando recursivamente.
+   - Muito eficiente (O(n log n)) e estável.
+5. Quick Sort: usa um pivô para dividir e ordenar sublistas.
+   - Rápido em média (O(n log n)), mas pode chegar a O(n²).
+
+💡 Boas práticas
+- Ordene os dados antes de usar busca binária.
+- Escolha o algoritmo conforme o tamanho e tipo dos dados.
+- Prefira Merge ou Quick Sort para grandes volumes.
+
+Resumo: busca encontra dados, ordenação organiza. Juntas, tornam a manipulação de informações mais rápida e eficiente.

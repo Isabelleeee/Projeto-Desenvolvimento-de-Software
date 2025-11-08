@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 5 - Introdução ao CSS",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual é a principal função do CSS no desenvolvimento web?",
+      "options": [
+        "Controlar a estrutura e o conteúdo da página",
+        "Adicionar interatividade com o usuário",
+        "Definir o estilo visual e o layout da página",
+        "Gerenciar o banco de dados do site"
+      ],
+      "answer": "Definir o estilo visual e o layout da página"
+    },
+    {
+      "id": 2,
+      "question": "No CSS, qual a diferença entre margin e padding?",
+      "options": [
+        "Margin cria espaço interno e padding cria espaço externo",
+        "Margin cria espaço externo e padding cria espaço interno",
+        "Ambos criam espaço interno",
+        "Ambos criam espaço externo"
+      ],
+      "answer": "Margin cria espaço externo e padding cria espaço interno"
+    }
+  ]
+}
