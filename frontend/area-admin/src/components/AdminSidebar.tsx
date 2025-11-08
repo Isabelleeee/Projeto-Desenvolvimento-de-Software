@@ -8,6 +8,7 @@ import {
   Settings,
   LogOut,
 } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 interface AdminSidebarProps {
@@ -16,6 +17,10 @@ interface AdminSidebarProps {
 }
 
 export function AdminSidebar({ currentPage, onPageChange }: AdminSidebarProps) {
+  const [user, setUser] = useState<{ username: string; email: string } | null>(
+    null
+  );
+
   const menuItems = [
     { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
     { id: "trilhas", label: "Trilhas", icon: BookOpen },
@@ -25,6 +30,42 @@ export function AdminSidebar({ currentPage, onPageChange }: AdminSidebarProps) {
     { id: "chat", label: "Chat IA", icon: MessageSquare },
     { id: "configuracoes", label: "Configurações", icon: Settings },
   ];
+
+  // 🔹 Buscar informações do admin logado
+  useEffect(() => {
+    const token = localStorage.getItem("api_token");
+    if (!token) return;
+
+    fetch("http://127.0.0.1:8000/api/test-auth/", {
+      headers: { Authorization: `Token ${token}` },
+      credentials: "include",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.username) {
+          setUser({
+            username: data.username,
+            email: data.email || "admin@estudaai.com",
+          });
+        }
+      })
+      .catch(() => setUser(null));
+  }, []);
+
+  // 🔸 Logout funcional
+  const handleLogout = async () => {
+    try {
+      await fetch("http://127.0.0.1:8000/api/logout/", {
+        method: "POST",
+        credentials: "include",
+      });
+    } catch (err) {
+      console.error("Erro ao fazer logout:", err);
+    } finally {
+      localStorage.removeItem("api_token");
+      window.location.href = "http://localhost:3000/"; // Redireciona para o login
+    }
+  };
 
   return (
     <div className="fixed left-0 top-0 h-screen w-64 flex flex-col border-r border-[#A8C5FF]/10 bg-[#0A0A1E]/80 backdrop-blur-xl">
@@ -58,32 +99,23 @@ export function AdminSidebar({ currentPage, onPageChange }: AdminSidebarProps) {
         })}
       </nav>
 
-      {/* Admin Profile */}
+      {/* Admin Profile + Logout */}
       <div className="p-4 border-t border-[#A8C5FF]/10">
         <div className="flex items-center gap-3 p-3 rounded-2xl bg-gradient-to-r from-[#6A00FF]/20 to-[#C7A3FF]/20">
           <Avatar className="h-10 w-10 ring-2 ring-[#A8C5FF]/30">
-            <AvatarImage src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" />
+            <AvatarImage src="https://api.dicebear.com/7.x/thumbs/svg?seed=admin" />
             <AvatarFallback>AD</AvatarFallback>
           </Avatar>
-
           <div className="flex-1">
-            <div className="text-sm text-white">Admin</div>
-            <div className="text-xs text-gray-400">admin@estudaai.com</div>
+            <div className="text-sm text-white">
+              {user?.username || "Admin"}
+            </div>
+            <div className="text-xs text-gray-400">
+              {user?.email || "admin@estudaai.com"}
+            </div>
           </div>
-
-          {/* Botão de Logout funcional */}
           <button
-            onClick={() => {
-              localStorage.removeItem("api_token");
-              fetch("http://127.0.0.1:8000/api/logout/", {
-                method: "POST",
-                credentials: "include",
-              })
-                .catch((err) => console.error("Erro ao fazer logout:", err))
-                .finally(() => {
-                  window.location.href = "http://localhost:3000/"; // redireciona pro login
-                });
-            }}
+            onClick={handleLogout}
             className="text-gray-400 hover:text-[#C7A3FF] transition-colors"
             title="Sair"
           >
