@@ -67,28 +67,56 @@ export function LoginForm({ onSwitchToSignup }: LoginFormProps) {
     setError(null);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/login-unificado/", {
+      const API_BASE = import.meta.env.VITE_API_BASE || "http://127.0.0.1:8000/api";
+
+      const res = await fetch(`${API_BASE}/login-unificado/`, {
         method: "POST",
-        credentials: "include",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          username: email,
+          username: email, // O backend aceita tanto e-mail quanto username
           password: password,
         }),
       });
 
-      const data = await res.json();
-
-      if (res.ok && (data?.redirect || data?.mensagem || data?.token)) {
-        if (data?.token) localStorage.setItem("api_token", data.token);
-        window.location.href = data?.redirect || data?.redirect_url || "/";
-        return;
+      // 🧩 Corrige erro de resposta HTML
+      const text = await res.text();
+      let data;
+      try {
+        data = JSON.parse(text);
+      } catch {
+        throw new Error("Erro ao conectar com o servidor.");
       }
 
-      setError(data?.mensagem || "Usuário ou senha inválidos.");
-    } catch (err) {
-      console.error("Erro de rede:", err);
-      setError("Falha ao conectar com o servidor.");
+      if (!res.ok) {
+        localStorage.removeItem("estudaai_token");
+        throw new Error(data?.mensagem || "Usuário ou senha inválidos.");
+      }
+
+      // 🔒 Salva o token em múltiplos locais (para Django, IA e fetchs)
+      if (data?.token) {
+        localStorage.setItem("estudaai_token", data.token);
+        sessionStorage.setItem("estudaai_token", data.token);
+        document.cookie = `estudaai_token=${data.token}; path=/; SameSite=Lax;`;
+        console.log("✅ Token salvo com sucesso:", data.token);
+      } else {
+        console.warn("⚠️ Nenhum token retornado do backend:", data);
+      }
+
+      // 🧭 Redirecionamento de acordo com o tipo de usuário
+      const redirectUrl =
+        data?.redirect ||
+        data?.redirect_url ||
+        (data?.tipo === "admin"
+          ? "http://localhost:3002/"
+          : "http://localhost:3001/");
+
+      // ✅ Pequeno delay para garantir que o token foi salvo
+      setTimeout(() => {
+        window.location.href = redirectUrl;
+      }, 300);
+    } catch (err: any) {
+      console.error("❌ Erro no login:", err);
+      setError(err.message || "Erro ao conectar com o servidor.");
     } finally {
       setLoading(false);
     }
@@ -108,7 +136,8 @@ export function LoginForm({ onSwitchToSignup }: LoginFormProps) {
     setError(null);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/cadastro/", {
+      const API_BASE = import.meta.env.VITE_API_BASE || "http://127.0.0.1:8000/api";
+      const res = await fetch(`${API_BASE}/cadastro/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
