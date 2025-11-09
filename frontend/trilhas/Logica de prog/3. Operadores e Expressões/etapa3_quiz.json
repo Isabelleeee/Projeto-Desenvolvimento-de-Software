@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 3 — Operadores e Expressões",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual operador é usado para verificar igualdade em pseudocódigo?",
+      "options": [
+        "==",
+        "=",
+        ":=",
+        "igual"
+      ],
+      "answer": "="
+    },
+    {
+      "id": 2,
+      "question": "O operador 'nao' (NOT) tem a função de:",
+      "options": [
+        "Comparar valores",
+        "Somar valores lógicos",
+        "Inverter o valor lógico",
+        "Retornar verdadeiro sempre"
+      ],
+      "answer": "Inverter o valor lógico"
+    }
+  ]
+}

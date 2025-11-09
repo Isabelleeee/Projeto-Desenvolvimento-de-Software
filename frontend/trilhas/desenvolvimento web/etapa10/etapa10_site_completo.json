@@ -1,0 +1,28 @@
+{
+  "title": "Etapa 11 - Construindo Seu Primeiro Site Completo (HTML + CSS + JavaScript + API)",
+  "summary": "Na Etapa 11, o estudante aplica todos os conhecimentos adquiridos para criar um site completo chamado EstudAI. O projeto combina HTML (estrutura e semântica), CSS (layout e estilo) e JavaScript (interatividade e integração com APIs). Através da Cat Facts API, o site exibe curiosidades aleatórias ao clicar em um botão, mostrando como conectar uma página web ao mundo real. Esse exercício consolida o domínio do desenvolvimento front-end moderno — unindo estrutura, design e funcionalidade — e resulta em um projeto pronto para portfólio, representando a evolução prática do aluno.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual é o objetivo principal do projeto EstudAI desenvolvido nesta etapa?",
+      "options": [
+        "Criar um site completo unindo HTML, CSS, JavaScript e integração com API",
+        "Aprender apenas a usar a Cat Facts API",
+        "Desenvolver um aplicativo mobile com React Native",
+        "Focar exclusivamente em animações CSS"
+      ],
+      "answer": "Criar um site completo unindo HTML, CSS, JavaScript e integração com API"
+    },
+    {
+      "id": 2,
+      "question": "Qual tecnologia é usada para buscar e exibir curiosidades aleatórias no site?",
+      "options": [
+        "API pública via fetch() em JavaScript",
+        "Biblioteca externa de CSS",
+        "Extensão do navegador",
+        "Banco de dados local"
+      ],
+      "answer": "API pública via fetch() em JavaScript"
+    }
+  ]
+}

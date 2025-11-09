@@ -1,0 +1,34 @@
+Etapa 8: Random Forest
+Resumo:
+ Combina várias Árvores de Decisão independentes e faz uma votação entre elas. Isso reduz o overfitting e aumenta a precisão.
+Usando a técnica Bagging o algoritmo cria multiplos subconjuntos aleatorios dos dados de treinamento originais (com reposição). cada arvore é treinada em uma dessas amostras exclusivas. 
+Ao construir uma árvore e determinar um ponto de divisão em um nó, o algoritmo considera apenas um subconjunto aleatório das features disponíveis, isso garante as arvores individuais diversas. Após a construção de todas as árvores, a previsão final é determinada pela agregação dos resultados de cada árvore:
+• Para Classificação: A previsão final é determinada por uma votação majoritária das previsões de todas as árvores.
+• Para Regressão: A previsão final é a média das previsões de todas as árvores.
+• Este método ajuda a equilibrar os erros individuais das árvores
+Vantagens: alta precisão, redução do overfitting, lida com grandes dados e dados ausentes, versatilidade
+Limitações: custo computacional, menos interpretável, previsões lentas
+
+
+Conteúdos extras:
+
+
+
+Perguntas:
+
+
+ O Random Forest é composto por:
+ a) Uma árvore
+ b) Muitas árvores ✅
+ c) Um único modelo linear
+ d) Apenas dados categóricos
+O tipo de técnica usada em Random Forest é chamado de:
+ a) Bagging ✅
+ b) Boosting
+ c) Normalização
+ d) Regularização
+Uma desvantagem do Random Forest é:
+ a) Baixa precisão
+ b) Maior custo computacional ✅
+ c) Pouco uso de dados
+ d) Dificuldade em interpretar uma árvore

@@ -1,0 +1,42 @@
+Etapa 10: Avaliação, Desempenho e generalização de Modelos ML
+Resumo:
+ Avaliar o desempenho é essencial.
+ Métricas:
+Classificação → Acurácia, Precisão, Recall, F1. 
+A acurácia mede a proporção de acertos, o F1-score combina a Precisão e o Reall
+
+
+Regressão → MAE, RMSE
+Métricas que quantificam o erro de previsão numérica
+Um modelo que possui uma alta acurácia mas um baixo recall indica a presença de muitos falsos negativos
+A capacidade de um modelo performar bem em novos dados é chamada de generalização. Pode atrapalhar a generalização:
+Overfitting: aprende demais, aprende o “ruído”. Para reduzi-lo usamos a regularização L2
+Underfitting: quando o modelo é simples demais e não aprende todos os padrões, ocorrendo quando tem uma alta polarização.
+
+
+Conteúdos extras:
+]
+
+
+
+Perguntas:
+
+
+A acurácia mede:
+ a) Tempo de execução
+ b) Proporção de acertos ✅
+ c) Velocidade
+ d) Custo
+
+
+
+ Overfitting significa que o modelo:
+ a) Aprende demais ✅
+ b) Aprende de menos
+ c) É equilibrado
+ d) Está regularizado
+Underfitting ocorre quando o modelo tem:
+ a) Alta variância
+ b) Alta polarização (bias) ✅
+ c) Poucos dados
+ d) Overtraining

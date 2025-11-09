@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Qual é a ordem correta de inclusão dos conjuntos numéricos?",
+        "alternativas": [
+            "A) Q ⊂ N ⊂ Z ⊂ R",
+            "B) N ⊂ Z ⊂ Q ⊂ R",
+            "C) Z ⊂ N ⊂ Q ⊂ R",
+            "D) I ⊂ Q ⊂ Z ⊂ N"
+        ],
+        "resposta_correta": "B) N ⊂ Z ⊂ Q ⊂ R"
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual das opções representa um número irracional?",
+        "alternativas": [
+            "A) 1/2",
+            "B) -3",
+            "C) √2",
+            "D) 0,75"
+        ],
+        "resposta_correta": "C) √2"
+    }
+]

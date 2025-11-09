@@ -1,0 +1,7 @@
+Resumo – Tries (Árvores de Prefixo)
+Uma Trie é uma árvore usada para armazenar palavras por seus prefixos. Cada nó representa um caractere, e o caminho da raiz até um nó marcado indica uma palavra completa.
+
+Ela permite buscas e inserções muito rápidas (O(L)), onde L é o tamanho da palavra, e economiza espaço ao compartilhar prefixos comuns.
+
+É amplamente usada em autocompletar, corretores ortográficos, dicionários e roteamento de redes IP.
+👉 Ideal para aplicações que precisam encontrar ou sugerir palavras a partir de prefixos de forma eficiente.

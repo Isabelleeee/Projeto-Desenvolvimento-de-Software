@@ -1,0 +1,29 @@
+Etapa 6: Regressão Logística
+Resumo:
+ Apesar do nome, é um modelo de classificação, usado para prever resultados binários (ex: 0 ou 1). Utiliza a função sigmoide para converter o resultado linear em uma probabilidade. Isso significa que a saída do modelo é uma probabilidade de a amostra pertencer à classe 1. 
+O logit da regressão logística é em sua essência, uma função linar de probabilidade. É o componente linear do modelo antes de ser transformado pela função sigmoide
+Conteúdos extras:
+
+
+
+
+
+
+Perguntas:
+
+
+ A regressão logística é usada para:
+ a) Regressão contínua
+ b) Classificação ✅
+ c) Clustering
+ d) Predição numérica
+A função sigmoide gera:
+ a) Números entre 0 e 1 ✅
+ b) Apenas 0 ou 1
+ c) Números negativos
+ d) Resultados inteiros
+ O logit da regressão logística é:
+ a) Uma função linear de probabilidade ✅
+ b) A diferença entre classes
+ c) A taxa de erro
+ d) O gradiente

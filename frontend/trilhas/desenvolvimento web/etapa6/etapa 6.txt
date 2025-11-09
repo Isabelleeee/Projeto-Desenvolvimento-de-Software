@@ -1,0 +1,102 @@
+etapa 6
+✅ Exercício — Construção de Página com HTML Semântico + CSS Externo
+
+📌 Tarefa:
+Crie uma página chamada index.html com:
+
+1️⃣ Cabeçalho contendo:
+
+Título principal do site
+
+Menu com 3 links (não precisam funcionar)
+
+2️⃣ Conteúdo principal:
+
+Uma seção com um texto sobre você
+
+Uma segunda seção com um parágrafo destacado usando classe
+
+3️⃣ Um aside com alguma informação adicional
+
+4️⃣ Um rodapé contendo seu nome e ano atual
+
+📌 Regras de estilo (CSS externo — style.css):
+
+Cor de fundo suave para o site
+
+Fonte padrão e confortável para leitura
+
+O título deve estar centralizado e com outra cor
+
+A seção destacada deve ter uma cor diferente ou bordas
+
+Espaçamento entre as seções para melhor organização
+
+💡 Dica: use pelo menos uma classe e um seletor por tag.
+
+✅ Gabarito (Modelo de Resposta Correta)
+
+Você pode adaptar as informações com os seus dados!
+
+📄 index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Site Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bem-vindo ao meu site!</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sobre mim</h2>
+            <p>Meu nome é Ana. Estou aprendendo desenvolvimento web e criando meu primeiro site.</p>
+        </section>
+
+        <section class="destaque">
+            <h2>Meu objetivo</h2>
+            <p>Quero me tornar uma desenvolvedora front-end!</p>
+        </section>
+    </main>
+
+    <aside>
+        <p>Curiosidade: adoro tecnologia e programação.</p>
+    </aside>
+
+    <footer>
+        <p>Feito por Ana — 2025</p>
+    </footer>
+
+</body>
+</html>
+
+🎨 style.css
+body {
+    background-color: #e9e9ff;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #4b0082;
+    text-align: center;
+}
+
+section {
+    margin: 20px;
+}
+
+.destaque {
+    background-color: #d6ccff;
+    padding: 10px;
+    border-radius: 6px;
+}

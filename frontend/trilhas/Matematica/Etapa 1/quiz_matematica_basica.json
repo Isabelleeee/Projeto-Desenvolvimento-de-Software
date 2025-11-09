@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Por que aprender matemática é importante?",
+        "alternativas": [
+            "A) Porque é usada apenas em cálculos escolares",
+            "B) Porque ajuda no raciocínio lógico e na tomada de decisões do dia a dia",
+            "C) Porque só serve para quem trabalha com números",
+            "D) Porque é exigida em provas"
+        ],
+        "resposta_correta": "B) Porque ajuda no raciocínio lógico e na tomada de decisões do dia a dia"
+    },
+    {
+        "id": 2,
+        "pergunta": "Quais são alguns dos principais temas da matemática básica?",
+        "alternativas": [
+            "A) Apenas números naturais e frações",
+            "B) Somente geometria e medidas",
+            "C) Números, operações, frações, porcentagem, medidas, geometria e raciocínio lógico",
+            "D) Apenas cálculo e álgebra"
+        ],
+        "resposta_correta": "C) Números, operações, frações, porcentagem, medidas, geometria e raciocínio lógico"
+    }
+]

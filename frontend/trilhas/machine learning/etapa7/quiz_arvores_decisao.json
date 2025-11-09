@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "As Árvores de Decisão tomam decisões com base em que tipo de regra?",
+        "alternativas": [
+            "A) Regras exponenciais",
+            "B) Regras se/então",
+            "C) Regras de logaritmo",
+            "D) Regras de probabilidade"
+        ],
+        "resposta_correta": "B) Regras se/então"
+    },
+    {
+        "id": 2,
+        "pergunta": "O que representa um nó-folha em uma Árvore de Decisão?",
+        "alternativas": [
+            "A) Um dado bruto",
+            "B) Uma decisão final",
+            "C) Um cálculo intermediário",
+            "D) Um critério de pureza"
+        ],
+        "resposta_correta": "B) Uma decisão final"
+    }
+]

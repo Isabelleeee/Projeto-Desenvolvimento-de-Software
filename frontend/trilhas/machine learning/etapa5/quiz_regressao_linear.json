@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "A regressão linear é usada para prever que tipo de valores?",
+        "alternativas": [
+            "A) Categorias",
+            "B) Valores numéricos",
+            "C) Grupos",
+            "D) Imagens"
+        ],
+        "resposta_correta": "B) Valores numéricos"
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual é a equação básica da regressão linear?",
+        "alternativas": [
+            "A) y = mx + b",
+            "B) y = x²",
+            "C) y = log(x)",
+            "D) y = 1/x"
+        ],
+        "resposta_correta": "A) y = mx + b"
+    }
+]

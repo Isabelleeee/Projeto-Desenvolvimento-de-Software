@@ -1,0 +1,5 @@
+[33mcc3e176[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/back-end-admin[m[33m, [m[1;31morigin/feature/back-end-admin[m[33m)[m Tema do front-end do admin ajustado para tema do projeto
+[33m4e54224[m ✅ Resolve conflito de merge no .gitignore (mantida versão otimizada)
+[33m601f4af[m[33m ([m[1;32mfeature/cleanup-estrutura[m[33m)[m 🔧 Atualiza .gitignore para Django + Vite (estrutura otimizada)
+[33m0f07a90[m 📦 Move front do estudante para frontend/area-estudante (padronização de estrutura)
+[33m104ed84[m 🧹 Limpeza de estrutura: remoção de pastas duplicadas e arquivos obsoletos

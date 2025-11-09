@@ -1,0 +1,27 @@
+Etapa 2: Tipos de Aprendizado
+Resumo: Aprendizado Supervisionado (Supervisionado): Este tipo de aprendizado utiliza dados rotulados. Um exemplo de aplicação do aprendizado supervisionado é um algoritmo que tenta classificar imagens.
+Aprendizado Não Supervisionado (Não supervisionado): Neste tipo, o algoritmo trabalha para encontrar padrões sem rótulos.
+Aprendizado por Reforço (Por reforço): Este método é caracterizado por aprender por meio de tentativa e erro com recompensas, sendo guiado por erros e recompensas
+
+Conteúdos extras:
+
+Perguntas:
+
+
+O aprendizado supervisionado usa:
+ a) Dados sem rótulo
+ b) Dados com rótulo ✅
+ c) Dados aleatórios
+ d) Dados de texto
+
+O aprendizado por reforço aprende por meio de:
+ a) Regras fixas
+ b) Erros e recompensas ✅
+ c) Exemplo humano
+ d) Agrupamentos
+
+Um algoritmo que tenta classificar imagens é exemplo de:
+ a) Não supervisionado
+ b) Supervisionado ✅
+ c) Por reforço
+ d) Autoaprendizado

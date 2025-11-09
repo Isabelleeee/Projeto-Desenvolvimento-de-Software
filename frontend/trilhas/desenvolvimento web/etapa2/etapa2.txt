@@ -1,0 +1,18 @@
+etapa2
+introdução ao html
+
+resumo:A construção de qualquer site começa com uma linguagem conhecida como HTML, sigla para HyperText Markup Language, ou em português, Linguagem de Marcação de Hipertexto. Essa linguagem é responsável por organizar e estruturar todas as informações que aparecem em uma página da web, como textos, imagens, botões, links e tabelas.
+
+O HTML não é considerado uma linguagem de programação, pois ele não realiza cálculos nem decisões lógicas. Em vez disso, ele indica ao navegador o que cada elemento de uma página representa e como deve ser exibido. Isso é feito por meio de tags, que são marcas usadas para identificar cada parte do conteúdo. Por exemplo, existem tags específicas para indicar um título, um parágrafo, uma imagem ou uma lista.
+
+Uma página HTML segue sempre uma estrutura base, que o navegador interpreta ao carregar o site. O documento começa com a declaração <!DOCTYPE html>, que informa ao navegador que se trata da versão moderna do HTML (HTML5). Em seguida, todo o conteúdo do site é organizado dentro da tag <html>. Dentro dela, encontramos duas divisões principais: o head e o body.
+
+O bloco <head> contém informações que não aparecem diretamente para o usuário, como o título exibido na aba do navegador, ícones do site e arquivos externos ligados ao layout e à interatividade. Já o body é responsável por tudo aquilo que o usuário pode ver e interagir ao acessar a página: textos, imagens, botões, menus, vídeos, formulários, entre outros.
+
+Além da estrutura, é importante destacar o conceito de elementos semânticos no HTML. Eles surgiram para tornar os sites mais acessíveis e bem organizados. Diferente das antigas <div> genéricas, novas tags — como <header>, <nav>, <main>, <section>, <article> e <footer> — deixam claro qual é o papel de cada parte do conteúdo dentro do site. Essa clareza beneficia não apenas o desenvolvedor, mas também motores de busca como o Google e leitores de tela utilizados por pessoas com deficiência visual.
+
+A criação de arquivos HTML é bastante simples. Basta utilizar um editor de código, como o Visual Studio Code, salvar um arquivo com a extensão .html e abri-lo em um navegador comum. Com poucas linhas de código, já é possível visualizar uma página básica funcionando na web. A partir disso, o aluno começa a construir diferentes documentos, criando navegação entre páginas, estruturando informações e evoluindo o projeto gradualmente.
+
+O aprendizado de HTML é essencial por ser a primeira etapa no desenvolvimento front-end. É ele que oferece a base onde futuramente o CSS irá aplicar o estilo visual e o JavaScript trará interatividade. Por essa razão, compreender HTML significa dominar o alicerce sobre o qual toda a experiência do usuário será construída.
+
+Em resumo, o HTML é o ponto de partida para quem deseja criar sites e aplicações web. Através de suas marcações, tornamos possível transformar ideias em estruturas reais na tela. Conhecer essa linguagem é como aprender a montar o “esqueleto” de uma página — e somente após dominá-la, será possível dar vida e beleza ao projeto com as próximas tecnologias da trilha.

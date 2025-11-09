@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Qual biblioteca é mais usada para aprendizado de máquina básico em Python?",
+        "alternativas": [
+            "A) TensorFlow",
+            "B) Scikit-learn",
+            "C) OpenCV",
+            "D) PyTorch"
+        ],
+        "resposta_correta": "B) Scikit-learn"
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual é o próximo passo lógico após dominar o Machine Learning clássico?",
+        "alternativas": [
+            "A) SQL",
+            "B) Deep Learning",
+            "C) Programação de sistemas",
+            "D) Modelagem estatística"
+        ],
+        "resposta_correta": "B) Deep Learning"
+    }
+]

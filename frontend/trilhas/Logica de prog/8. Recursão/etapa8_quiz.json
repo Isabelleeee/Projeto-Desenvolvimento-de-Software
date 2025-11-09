@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 8 — Recursão (Recursion)",
+  "questions": [
+    {
+      "id": 1,
+      "question": "O que caracteriza uma função recursiva?",
+      "options": [
+        "Uma função que chama outras funções auxiliares.",
+        "Uma função que chama a si mesma durante sua execução.",
+        "Uma função que utiliza apenas estruturas de repetição (loops).",
+        "Uma função que não possui retorno."
+      ],
+      "answer": "Uma função que chama a si mesma durante sua execução."
+    },
+    {
+      "id": 2,
+      "question": "Por que o caso base é essencial em uma função recursiva?",
+      "options": [
+        "Porque define a condição que encerra as chamadas recursivas.",
+        "Porque permite que o código use variáveis globais.",
+        "Porque é o primeiro passo da recursão, não o último.",
+        "Porque garante que a função use menos memória."
+      ],
+      "answer": "Porque define a condição que encerra as chamadas recursivas."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+Etapa 3: Conceitos Básicos de Dados
+Resumo: A estrutura dos básica dos dados é definida por samples (cada sample é uma linha do database), features (colunas do database) e o target (o que queremos prever). 
+A dimensionalidade dos dados é determinada a complexidade e/ou ao numero de variaveis de entrada, dependente das features. 
+Conteúdos extras:
+
+Perguntas:
+
+
+Cada coluna de um dataset representa uma:
+ a) Amostra
+ b) Feature ✅
+ c) Tabela
+ d) Saída
+A variável-alvo é:
+ a) A variável que queremos prever ✅
+ b) O identificador do conjunto
+ c) Uma feature constante
+ d) O ruído dos dados
+Se um conjunto tem 100 amostras e 10 features, qual é a dimensionalidade dos dados?
+ a) 10 ✅
+ b) 100
+ c) 110
+ d) 1000
+

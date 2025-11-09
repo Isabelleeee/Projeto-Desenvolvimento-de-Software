@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 4 — Estruturas Condicionais",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual estrutura executa uma ação apenas se a condição for verdadeira?",
+      "options": [
+        "Composta",
+        "Simples",
+        "Encadeada",
+        "Aninhada"
+      ],
+      "answer": "Simples"
+    },
+    {
+      "id": 2,
+      "question": "Qual operador lógico retorna verdadeiro se ambas as condições forem verdadeiras?",
+      "options": [
+        "ou (OR)",
+        "nao (NOT)",
+        "e (AND)",
+        "senao"
+      ],
+      "answer": "e (AND)"
+    }
+  ]
+}

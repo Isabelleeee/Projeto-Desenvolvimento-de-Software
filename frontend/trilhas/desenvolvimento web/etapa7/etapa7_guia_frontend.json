@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 7 - Guia de Estudo: Fundamentos de Web e Front-end",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual é a função principal do modelo cliente-servidor na web?",
+      "options": [
+        "Permitir que o servidor crie sites automaticamente",
+        "Definir como o navegador e o servidor trocam informações",
+        "Organizar o design visual das páginas",
+        "Controlar a velocidade de conexão"
+      ],
+      "answer": "Definir como o navegador e o servidor trocam informações"
+    },
+    {
+      "id": 2,
+      "question": "O que significa 'responsividade' no desenvolvimento web?",
+      "options": [
+        "Capacidade do site de se adaptar a diferentes tamanhos de tela",
+        "Velocidade de resposta do servidor",
+        "Quantidade de código JavaScript usado",
+        "Função que adiciona animações à página"
+      ],
+      "answer": "Capacidade do site de se adaptar a diferentes tamanhos de tela"
+    }
+  ]
+}

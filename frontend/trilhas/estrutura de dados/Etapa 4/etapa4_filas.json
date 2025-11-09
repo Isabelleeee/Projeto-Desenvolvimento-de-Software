@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 4 - Filas",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual princípio define o funcionamento de uma fila?",
+      "options": [
+        "LIFO",
+        "FIFO",
+        "Aleatório",
+        "Prioridade"
+      ],
+      "answer": "FIFO"
+    },
+    {
+      "id": 2,
+      "question": "Em uma fila, onde os novos elementos são inseridos?",
+      "options": [
+        "No início",
+        "No meio",
+        "No final",
+        "Em qualquer posição"
+      ],
+      "answer": "No final"
+    }
+  ]
+}

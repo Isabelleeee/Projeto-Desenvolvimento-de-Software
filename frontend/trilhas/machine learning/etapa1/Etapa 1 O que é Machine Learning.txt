@@ -1,0 +1,24 @@
+Etapa 1: O que é Machine Learning?
+Resumo:
+Machine Learning (ML) é uma área da Inteligência Artificial. A função essencial do ML é fazer com que as máquinas aprendam com dados.
+O aprendizado é alcançado através do reconhecimento de padrões nos dados fornecidos, permitindo que as máquinas façam previsões. É crucial notar que isso acontece sem a necessidade de programação explícita
+A principal diferença entre Machine Learning e a programação tradicional é o método de desenvolvimento das regras:
+• ML aprende padrões a partir de exemplos e em contraste o ML não permite que os computadores tomem decisões aleatórias ou rodem apenas códigos fixos. Portanto o ML permite que os computadores aprendam dados 
+Um exemplo real e prático da aplicação de Machine Learning é a classificação de e-mails como spam.
+
+Perguntas:
+	1) Machine Learning permite que computadores:
+ a) Tomem decisões aleatórias
+ b) Aprendam com dados (V)
+ c) Sejam programados manualmente
+ d) Rodem apenas códigos fixos
+2)  Um exemplo real de ML é:
+ a) Gravar vídeos
+ b) Classificar e-mails como spam (V)
+ c) Escrever textos à mão
+ d) Ler PDFs
+3) A principal diferença entre ML e programação tradicional é:
+ a) ML não usa dados
+ b) ML é manual
+ c) ML aprende padrões a partir de exemplos (V)
+ d) ML usa apenas equações matemáticas

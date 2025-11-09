@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 8 - Layout no CSS: A Lógica de Caixas e Exibição dos Elementos",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Quais são as quatro camadas que compõem o Box Model no CSS?",
+      "options": [
+        "Conteúdo, Padding, Border e Margin",
+        "Header, Body, Footer e Aside",
+        "Texto, Fundo, Espaço e Linha",
+        "Topo, Meio, Base e Fundo"
+      ],
+      "answer": "Conteúdo, Padding, Border e Margin"
+    },
+    {
+      "id": 2,
+      "question": "Qual propriedade CSS controla como um elemento se comporta em relação à linha e ao bloco?",
+      "options": [
+        "position",
+        "display",
+        "align-items",
+        "overflow"
+      ],
+      "answer": "display"
+    }
+  ]
+}

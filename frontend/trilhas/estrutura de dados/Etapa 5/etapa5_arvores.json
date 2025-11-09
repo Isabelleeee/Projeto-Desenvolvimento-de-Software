@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 5 - Árvores",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual é o nome do nó principal de uma árvore?",
+      "options": [
+        "Folha",
+        "Raiz",
+        "Tronco",
+        "Galho"
+      ],
+      "answer": "Raiz"
+    },
+    {
+      "id": 2,
+      "question": "Na árvore binária de busca (BST), onde ficam os valores menores que o nó?",
+      "options": [
+        "Na direita",
+        "Na esquerda",
+        "Na raiz",
+        "Nas folhas"
+      ],
+      "answer": "Na esquerda"
+    }
+  ]
+}

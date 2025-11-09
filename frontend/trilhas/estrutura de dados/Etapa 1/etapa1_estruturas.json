@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 1 - Estruturas de Dados Lineares",
+  "questions": [
+    {
+      "id": 1,
+      "question": "O que são estruturas de dados lineares?",
+      "options": [
+        "Organizam dados em hierarquias",
+        "Organizam dados em sequência",
+        "São estruturas desordenadas",
+        "São usadas apenas em bancos de dados"
+      ],
+      "answer": "Organizam dados em sequência"
+    },
+    {
+      "id": 2,
+      "question": "Qual exemplo NÃO é uma estrutura linear?",
+      "options": [
+        "Lista",
+        "Pilha",
+        "Fila",
+        "Árvore"
+      ],
+      "answer": "Árvore"
+    }
+  ]
+}

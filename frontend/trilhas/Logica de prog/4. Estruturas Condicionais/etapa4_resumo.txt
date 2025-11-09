@@ -1,0 +1,17 @@
+Etapa 4 — Estruturas Condicionais
+
+As estruturas condicionais permitem que um algoritmo tome decisões com base em condições verdadeiras ou falsas. 
+Elas tornam o programa inteligente, permitindo caminhos diferentes de execução conforme os dados.
+
+Tipos principais:
+1. Simples: executa um bloco apenas se a condição for verdadeira.
+2. Composta: executa um bloco se for verdadeira e outro se for falsa.
+3. Encadeada: avalia múltiplas condições de forma sequencial.
+
+Também é possível combinar condições com operadores lógicos:
+- e (AND): verdadeiro se ambas forem verdadeiras.
+- ou (OR): verdadeiro se pelo menos uma for verdadeira.
+- nao (NOT): inverte o valor lógico.
+
+O uso correto do se, senao e fimse garante clareza e controle do fluxo lógico do programa. 
+Essas estruturas são a base para decisões automáticas e controle de comportamento em qualquer algoritmo.

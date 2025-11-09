@@ -1,0 +1,32 @@
+Etapa 8 — Recursão (Recursion)
+
+A recursão é uma técnica em que uma função chama a si mesma para resolver um problema menor,
+até atingir um caso base que interrompe as chamadas. É usada em algoritmos de busca, ordenação,
+estruturas de dados e matemática.
+
+📘 Estrutura básica
+- Caso base: condição que encerra a recursão.
+- Chamada recursiva: função chama a si mesma com parâmetros reduzidos.
+
+⚙️ Exemplo: Fatorial
+funcao fatorial(n)
+  se n = 0 entao retorna 1
+  senao retorna n * fatorial(n - 1)
+fimfuncao
+
+🧠 Conceitos importantes
+- A pilha de execução armazena as chamadas recursivas.
+- O caso base impede loop infinito e stack overflow.
+- Cada chamada aproxima o problema de sua solução.
+
+📈 Aplicações
+- Fatorial, Fibonacci, Torre de Hanói, busca binária, percorrer árvores.
+- Ideal para problemas que se dividem naturalmente em subproblemas.
+
+⚖️ Recursão vs Iteração
+- Recursão: usa pilha, mais conceitual, elegante, mas consome mais memória.
+- Iteração: usa loops, mais eficiente e direta.
+
+✅ Resumo final
+A recursão simplifica problemas complexos dividindo-os em partes menores.
+Dominar o caso base e entender a pilha de execução é essencial para aplicar recursão com segurança e eficiência.

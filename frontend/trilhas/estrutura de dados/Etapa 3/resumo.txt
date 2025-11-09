@@ -1,0 +1,7 @@
+Resumo – Pilhas (Stack)
+Uma pilha é uma estrutura de dados baseada no princípio LIFO (Last In, First Out), ou seja, o último elemento a entrar é o primeiro a sair — como uma pilha de pratos. As principais operações são: push() (empilhar), pop() (desempilhar), peek() (ver o topo) e isEmpty() (verificar se está vazia).
+
+Pode ser implementada com arrays (rápida, mas de tamanho fixo) ou listas encadeadas (flexível, mas usa mais memória). Todas as operações principais têm complexidade O(1), pois sempre ocorrem no topo.
+
+É usada em situações onde a ordem reversa é importante, como histórico de navegação, funções aninhadas (call stack), comandos de desfazer/refazer (UNDO/REDO) e verificação de parênteses.
+👉 Regra de ouro: só trabalhamos com o topo da pilha!

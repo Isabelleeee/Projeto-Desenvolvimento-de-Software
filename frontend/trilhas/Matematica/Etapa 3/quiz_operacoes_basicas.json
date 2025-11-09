@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Qual é a ordem correta para resolver operações matemáticas?",
+        "alternativas": [
+            "A) Adição e subtração primeiro, depois multiplicação e divisão",
+            "B) Multiplicação e divisão primeiro, depois adição e subtração",
+            "C) Qualquer ordem, o resultado é o mesmo",
+            "D) Resolver da direita para a esquerda sempre"
+        ],
+        "resposta_correta": "B) Multiplicação e divisão primeiro, depois adição e subtração"
+    },
+    {
+        "id": 2,
+        "pergunta": "Se um produto custa R$ 75,00 e foi pago em 3 parcelas iguais, qual o valor de cada parcela?",
+        "alternativas": [
+            "A) R$ 20,00",
+            "B) R$ 25,00",
+            "C) R$ 30,00",
+            "D) R$ 35,00"
+        ],
+        "resposta_correta": "B) R$ 25,00"
+    }
+]

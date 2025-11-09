@@ -1,0 +1,14 @@
+Etapa 5 — Estruturas de Repetição
+
+As estruturas de repetição (loops) permitem executar um mesmo conjunto de comandos várias vezes, 
+evitando repetições manuais e tornando o código mais eficiente. Existem três tipos principais:
+
+1. Enquanto (While): executa enquanto a condição for verdadeira.
+2. Repita...até (Do...Until): executa até que a condição se torne verdadeira (testa no final).
+3. Para (For): executa um número fixo de vezes, controlado por um contador.
+
+O comando “saia” (break) pode ser usado para encerrar o loop antes do final. 
+É importante atualizar as variáveis de controle e evitar condições que nunca se tornam falsas, 
+para não criar loops infinitos.
+
+Essas estruturas são essenciais para automatizar tarefas, processar listas e otimizar algoritmos.

@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "O que caracteriza o aprendizado supervisionado?",
+        "alternativas": [
+            "A) Usa dados sem rótulo",
+            "B) Usa dados com rótulo",
+            "C) Usa dados aleatórios",
+            "D) Aprende apenas com recompensas"
+        ],
+        "resposta_correta": "B) Usa dados com rótulo"
+    },
+    {
+        "id": 2,
+        "pergunta": "Como o aprendizado por reforço aprende?",
+        "alternativas": [
+            "A) Por meio de regras fixas",
+            "B) Por tentativa e erro, com recompensas e punições",
+            "C) Observando exemplos humanos",
+            "D) Através de agrupamentos automáticos"
+        ],
+        "resposta_correta": "B) Por tentativa e erro, com recompensas e punições"
+    }
+]

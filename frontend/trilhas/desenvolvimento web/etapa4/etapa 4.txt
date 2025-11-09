@@ -1,0 +1,182 @@
+etapa 4
+exercícios 
+resumo: aprender na pratica o que os comandos fazem 
+
+📌 Exercício 1 — Criando sua primeira página
+
+Crie um arquivo chamado index.html contendo:
+
+Um título principal usando <h1>
+
+Um parágrafo explicando sobre você (nome, curso etc.)
+
+📍 Objetivo: Fixar estrutura inicial e criação do primeiro arquivo HTML.
+
+📌 Exercício 2 — Hierarquia de Títulos
+
+Crie uma página com um tema livre usando:
+
+Um <h1> para o título principal
+
+Dois <h2> como subtítulos
+
+Pelo menos um parágrafo em cada seção
+
+📍 Objetivo: Usar corretamente os níveis de títulos.
+
+📌 Exercício 3 — Imagens com descrição
+
+Adicione uma imagem que esteja em uma pasta chamada imagens/ dentro do projeto.
+Inclua o atributo alt descrevendo a imagem.
+
+📍 Objetivo: Compreender tags sem fechamento e acessibilidade.
+
+📌 Exercício 4 — Criando links
+
+Insira dois links em uma página:
+
+Um para outro arquivo HTML do seu projeto
+
+Um para um site externo (Google, Youtube etc.)
+
+📍 Objetivo: Navegação entre páginas e para a web.
+
+📌 Exercício 5 — Listas organizando conteúdo
+
+Crie uma lista ordenada e outra não ordenada com hobbies ou interesses seus.
+Mínimo: 5 itens em cada.
+
+📍 Objetivo: Estrutura de informações listadas.
+
+📌 Exercício 6 — Dividindo o conteúdo
+
+Utilize <div> para separar visualmente:
+
+Cabeçalho
+
+Conteúdo principal
+
+Rodapé
+
+📍 Objetivo: Organização de layout para uso futuro com CSS.
+
+📌 Exercício 7 — Página com múltiplos elementos
+
+Crie uma página contendo no mínimo:
+
+<h1>, <h2>
+
+Dois <p>
+
+Uma <img>
+
+Um <a>
+
+Uma <ul> ou <ol>
+
+📍 Objetivo: Integrar os conhecimentos anteriores.
+
+📌 Exercício 8 — Site com 2 páginas
+
+Monte um pequeno site com 2 páginas:
+
+Página principal (index.html)
+
+Página secundária (sobre.html)
+
+Um link entre elas em cada uma
+
+Cada página deve ter título e um parágrafo
+
+📍 Objetivo: Construção de um mini-projeto HTML navegável.
+
+✅ Gabarito dos Exercícios
+
+Obs.: O aluno pode adaptar textos, imagens e links como desejar.
+Abaixo está um modelo de referência para conferência.
+
+✅ Exercício 1 — Gabarito padrão
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sobre Mim</title>
+</head>
+<body>
+  <h1>Olá! Eu sou a Ana</h1>
+  <p>Sou estudante de Desenvolvimento Web e estou aprendendo HTML.</p>
+</body>
+</html>
+
+✅ Exercício 2 — Gabarito
+<h1>Meus Filmes Favoritos</h1>
+
+<h2>Ação</h2>
+<p>Gosto de filmes com muita adrenalina.</p>
+
+<h2>Comédia</h2>
+<p>Comédias sempre me fazem rir!</p>
+
+✅ Exercício 3 — Gabarito
+<img src="imagens/foto.jpg" alt="Foto da paisagem ao pôr do sol">
+
+✅ Exercício 4 — Gabarito
+<a href="sobre.html">Ir para a página Sobre</a><br>
+<a href="https://www.google.com">Pesquisar no Google</a>
+
+✅ Exercício 5 — Gabarito
+<ol>
+  <li>Estudar</li>
+  <li>Programar</li>
+  <li>Jogar</li>
+  <li>Viajar</li>
+  <li>Ler</li>
+</ol>
+
+<ul>
+  <li>Música</li>
+  <li>Filmes</li>
+  <li>Séries</li>
+  <li>Esportes</li>
+  <li>Culinária</li>
+</ul>
+
+✅ Exercício 6 — Gabarito
+<div>
+  <h1>Meu Site</h1>
+</div>
+
+<div>
+  <p>Conteúdo principal da página.</p>
+</div>
+
+<div>
+  <p>Rodapé da página</p>
+</div>
+
+✅ Exercício 7 — Gabarito (modelo)
+<h1>Meu Blog</h1>
+<h2>Post do Dia</h2>
+<p>Hoje eu aprendi HTML e criei minha primeira página.</p>
+<p>Estou muito animada para continuar estudando!</p>
+<img src="imagens/blog.png" alt="Imagem do blog">
+<a href="https://www.youtube.com">Meu vídeo favorito</a>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+
+✅ Exercício 8 — Estrutura do projeto
+
+📌 index.html
+
+<h1>Página Inicial</h1>
+<p>Bem-vindo ao meu site!</p>
+<a href="sobre.html">Sobre mim</a>
+
+
+📌 sobre.html
+
+<h1>Sobre Mim</h1>
+<p>Sou uma estudante de programação web.</p>
+<a href="index.html">Voltar para o início</a>

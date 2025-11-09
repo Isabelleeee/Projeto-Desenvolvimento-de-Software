@@ -1,0 +1,27 @@
+Resumo – Grafos
+Um grafo representa conexões entre objetos, formados por vértices (nós) e arestas (ligações). Pode ser:
+
+
+Direcionado: tem sentido (ex.: seguidores no Instagram).
+
+
+Não-direcionado: ligação nos dois sentidos (ex.: amizade).
+
+
+Ponderado: arestas com valores (ex.: distância).
+
+
+Pode ser guardado como matriz de adjacência (rápida, mas pesada) ou lista de adjacência (leve e eficiente).
+Principais algoritmos:
+
+
+BFS: busca em largura, encontra caminhos curtos.
+
+
+DFS: busca em profundidade, detecta ciclos.
+
+
+Dijkstra: menor caminho em grafos com pesos.
+
+
+👉 Grafos modelam redes, rotas e relações, conectando tudo de forma lógica e visual.

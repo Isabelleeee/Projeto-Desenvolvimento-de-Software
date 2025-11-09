@@ -1,0 +1,26 @@
+Etapa 5: Regressão Linear
+Resumo:
+ Usada para prever valores contínuos (valores numéricos). O mecanismo principal é ajustar uma linha aos dados, desse modo minimizando o erro entre os valores do treino e os reais. 
+A equação que define a regressão linear é: 
+y = mx + b
+O melhor método é definir bons valores para m e b (vetor gradiente), minimizando erros
+Conteúdos extras:
+
+
+
+Perguntas:
+ A regressão linear é usada para prever:
+ a) Categorias
+ b) Valores numéricos ✅
+ c) Grupos
+ d) Imagens
+A equação básica da regressão linear é:
+ a) y = mx + b ✅
+ b) y = x²
+ c) y = log(x)
+ d) y = 1/x
+O método mais comum para ajustar a linha de regressão é:
+ a) Gradiente descendente ✅
+ b) Regressão logística
+ c) K-means
+ d) Random forest

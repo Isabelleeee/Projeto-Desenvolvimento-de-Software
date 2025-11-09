@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 2 - Introdução ao HTML",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual é a principal função do HTML em uma página web?",
+      "options": [
+        "Adicionar interatividade e animações",
+        "Aplicar estilos e cores ao conteúdo",
+        "Organizar e estruturar as informações da página",
+        "Gerenciar o banco de dados do site"
+      ],
+      "answer": "Organizar e estruturar as informações da página"
+    },
+    {
+      "id": 2,
+      "question": "O que significa a sigla HTML?",
+      "options": [
+        "HyperText Markup Language",
+        "HighText Modeling Language",
+        "Hyper Transfer Machine Language",
+        "Home Tool Management Language"
+      ],
+      "answer": "HyperText Markup Language"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 3 - Pilhas",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual é o princípio básico de funcionamento de uma pilha?",
+      "options": [
+        "FIFO",
+        "LIFO",
+        "Ordenação",
+        "Aleatoriedade"
+      ],
+      "answer": "LIFO"
+    },
+    {
+      "id": 2,
+      "question": "Qual operação remove o elemento do topo da pilha?",
+      "options": [
+        "Push",
+        "Peek",
+        "Pop",
+        "Insert"
+      ],
+      "answer": "Pop"
+    }
+  ]
+}

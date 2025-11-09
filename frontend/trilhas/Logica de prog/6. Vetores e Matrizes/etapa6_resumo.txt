@@ -1,0 +1,22 @@
+Etapa 6 — Vetores e Matrizes
+
+Vetores e matrizes são estruturas de dados usadas para armazenar vários valores de forma organizada.
+
+📘 Vetor (Array)
+- Armazena uma sequência linear (1D) de elementos do mesmo tipo.
+- Cada elemento é identificado por um índice (ex: notas[3]).
+- Ideal para listas de valores, como notas ou preços.
+
+📗 Matriz (Matrix)
+- Estrutura bidimensional (2D) com linhas e colunas (ex: matriz[2][3]).
+- Usada para representar tabelas, mapas ou grades de dados.
+
+🔁 Loops são usados para preencher, percorrer e processar vetores e matrizes.
+- Exemplo: calcular soma, média ou encontrar o maior valor.
+
+⚠️ Cuidados:
+- Evitar acessar índices fora dos limites.
+- Inicializar variáveis antes do uso.
+- Não confundir linha com coluna.
+
+Resumo: Vetores organizam dados lineares; matrizes estruturam dados em duas dimensões, tornando o algoritmo mais eficiente e escalável.

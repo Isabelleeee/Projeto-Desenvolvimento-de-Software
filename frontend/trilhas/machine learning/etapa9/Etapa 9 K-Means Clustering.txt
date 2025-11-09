@@ -1,0 +1,26 @@
+Etapa 9: K-Means Clustering
+Resumo:
+ K clusters é um algoritmo não supervisionado, usado em tarefas de agrupamento. Ele agrupa dados semelhantes em K clusters (ou grupos). 
+O K é o número de clusters, e para ajustá-los o algoritmo calcula a média dos pontos de cada clusters.
+O K-means é essencial para o critério de parada, quando os centroide não mudam mais de posição. 
+Conteúdos extras:
+
+
+Perguntas:
+
+
+ O K-Means é usado em:
+ a) Classificação
+ b) Agrupamento ✅
+ c) Regressão
+ d) Deep learning
+O “K” no K-Means representa:
+ a) Número de variáveis
+ b) Número de clusters ✅
+ c) Número de iterações
+ d) Número de amostras
+O critério de convergência do K-Means é:
+ a) Quando os centroides não mudam ✅
+ b) Quando os rótulos mudam
+ c) Quando o erro aumenta
+ d) Quando o K muda

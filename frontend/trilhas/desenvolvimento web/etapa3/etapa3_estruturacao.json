@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 3 - Estruturação de Conteúdo em HTML",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual tag é usada para criar um link em HTML?",
+      "options": [
+        "<link>",
+        "<a>",
+        "<href>",
+        "<url>"
+      ],
+      "answer": "<a>"
+    },
+    {
+      "id": 2,
+      "question": "Qual atributo da tag <img> é usado para descrever a imagem caso ela não carregue?",
+      "options": [
+        "src",
+        "alt",
+        "title",
+        "href"
+      ],
+      "answer": "alt"
+    }
+  ]
+}

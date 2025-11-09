@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 7 — Funções e Procedimentos (Functions and Procedures)",
+  "questions": [
+    {
+      "id": 1,
+      "question": "O que melhor define uma função (function)?",
+      "options": [
+        "Um bloco que só exibe mensagens.",
+        "Um bloco que recebe parâmetros e retorna um valor.",
+        "Um bloco que não pode ser testado isoladamente.",
+        "Uma variável global."
+      ],
+      "answer": "Um bloco que recebe parâmetros e retorna um valor."
+    },
+    {
+      "id": 2,
+      "question": "Qual a vantagem principal da modularização?",
+      "options": [
+        "Aumentar o tamanho do código.",
+        "Reutilização e melhor organização.",
+        "Tornar o código menos legível.",
+        "Eliminar a necessidade de testes."
+      ],
+      "answer": "Reutilização e melhor organização."
+    }
+  ]
+}

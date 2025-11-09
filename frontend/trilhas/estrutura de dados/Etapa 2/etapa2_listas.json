@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 2 - Listas Encadeadas",
+  "questions": [
+    {
+      "id": 1,
+      "question": "O que diferencia uma lista encadeada de um array?",
+      "options": [
+        "O tamanho fixo",
+        "O uso de ponteiros",
+        "A ordenação automática",
+        "O acesso direto por índice"
+      ],
+      "answer": "O uso de ponteiros"
+    },
+    {
+      "id": 2,
+      "question": "Na lista duplamente encadeada, cada nó aponta para:",
+      "options": [
+        "Somente o próximo nó",
+        "O anterior e o próximo",
+        "Apenas o anterior",
+        "A raiz da lista"
+      ],
+      "answer": "O anterior e o próximo"
+    }
+  ]
+}

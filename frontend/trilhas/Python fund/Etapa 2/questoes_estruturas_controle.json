@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Qual é a diferença principal entre o for e o while em Python?",
+        "alternativas": [
+            "A) O for é usado quando não se sabe quantas vezes repetir",
+            "B) O while é usado para percorrer listas",
+            "C) O for é usado quando o número de repetições é conhecido, e o while quando depende de uma condição",
+            "D) Ambos servem apenas para contar números"
+        ],
+        "resposta_correta": "C) O for é usado quando o número de repetições é conhecido, e o while quando depende de uma condição"
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual operador lógico retorna True se pelo menos uma condição for verdadeira?",
+        "alternativas": [
+            "A) and",
+            "B) or",
+            "C) not",
+            "D) xor"
+        ],
+        "resposta_correta": "B) or"
+    }
+]

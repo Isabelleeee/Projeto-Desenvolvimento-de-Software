@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "O que o algoritmo K-Means faz?",
+        "alternativas": [
+            "A) Classifica dados rotulados",
+            "B) Agrupa dados semelhantes em clusters",
+            "C) Preve valores numéricos",
+            "D) Calcula probabilidades"
+        ],
+        "resposta_correta": "B) Agrupa dados semelhantes em clusters"
+    },
+    {
+        "id": 2,
+        "pergunta": "O que o 'K' representa no K-Means?",
+        "alternativas": [
+            "A) O número de variáveis",
+            "B) O número de clusters (grupos)",
+            "C) O número de iterações",
+            "D) O número de amostras"
+        ],
+        "resposta_correta": "B) O número de clusters (grupos)"
+    }
+]

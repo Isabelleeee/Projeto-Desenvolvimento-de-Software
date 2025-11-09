@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Qual é a diferença entre uma classe e um objeto em Python?",
+        "alternativas": [
+            "A) A classe é o código e o objeto é o computador",
+            "B) A classe é o modelo e o objeto é a instância criada a partir dela",
+            "C) A classe é usada apenas em bibliotecas externas",
+            "D) O objeto serve para criar classes automaticamente"
+        ],
+        "resposta_correta": "B) A classe é o modelo e o objeto é a instância criada a partir dela"
+    },
+    {
+        "id": 2,
+        "pergunta": "Para que serve o método .join() ao usar threads em Python?",
+        "alternativas": [
+            "A) Para iniciar uma nova thread",
+            "B) Para fazer o programa principal esperar o término das threads",
+            "C) Para criar um atraso na execução de uma thread",
+            "D) Para interromper uma thread automaticamente"
+        ],
+        "resposta_correta": "B) Para fazer o programa principal esperar o término das threads"
+    }
+]

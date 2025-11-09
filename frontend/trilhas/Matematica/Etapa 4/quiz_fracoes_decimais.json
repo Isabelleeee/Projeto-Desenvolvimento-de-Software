@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "O que representa uma fração?",
+        "alternativas": [
+            "A) Um número inteiro dividido por zero",
+            "B) Uma parte de um todo, formada por numerador e denominador",
+            "C) Um número sempre maior que um",
+            "D) Um número negativo sem valor decimal"
+        ],
+        "resposta_correta": "B) Uma parte de um todo, formada por numerador e denominador"
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual é a relação entre frações e decimais?",
+        "alternativas": [
+            "A) São formas diferentes de representar a mesma quantidade",
+            "B) São conceitos totalmente diferentes e não se relacionam",
+            "C) Frações são usadas apenas em receitas e decimais em dinheiro",
+            "D) Frações são sempre menores que decimais"
+        ],
+        "resposta_correta": "A) São formas diferentes de representar a mesma quantidade"
+    }
+]

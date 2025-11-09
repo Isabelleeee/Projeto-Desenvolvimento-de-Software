@@ -1,0 +1,87 @@
+etapa 3 estruturação
+reusmo:Após conhecer os conceitos iniciais do HTML, chega o momento de aprender como realmente estruturamos o conteúdo dentro de uma página. Se o HTML é a base da web, então entender como organizar títulos, textos, links e imagens é essencial para criar sites que façam sentido visual e funcionalmente.
+
+Títulos possuem níveis hierárquicos, indicando importância dentro da página. O <h1> representa o título principal; <h2>, subtítulos; e assim por diante, até o <h6>.
+
+Exemplo:
+
+<h1>Receitas Caseiras</h1>
+<h2>Bolo de Chocolate</h2>
+<p>Essa receita é simples, deliciosa e perfeita para qualquer ocasião.</p>
+
+
+Essa hierarquia é importante para organização, acessibilidade e leitura por buscadores como o Google.
+
+🔗 Links: Conectando páginas e conteúdos
+
+Links permitem que o usuário navegue para outras páginas ou sites. Eles são criados com a tag <a>, usando o atributo href para indicar o destino:
+
+<a href="https://www.google.com">Clique aqui para pesquisar no Google</a>
+
+
+Links podem também direcionar para outras páginas dentro do mesmo site:
+
+<a href="contato.html">Fale Conosco</a>
+
+🖼️ Imagens: Visual trazendo significado
+
+Para exibir imagens, utilizamos a tag <img>, que é uma tag vazia (não possui fechamento).
+O atributo src informa o caminho da imagem, e alt traz uma descrição alternativa para acessibilidade:
+
+<img src="imagens/logo.png" alt="Logo da empresa">
+
+
+Se a imagem não carregar, o navegador exibirá o texto do atributo alt, garantindo que o conteúdo não seja perdido.
+
+📋 Listas: Organização clara de informações
+
+Listas são essenciais para estruturar menus, instruções, tópicos e itens variados. Existem dois tipos principais:
+
+✔ Listas ordenadas (<ol>) — numeradas
+✔ Listas não-ordenadas (<ul>) — com marcadores como bolinhas
+
+Exemplos:
+
+<ol>
+  <li>Pré-aqueça o forno</li>
+  <li>Misture os ingredientes</li>
+  <li>Leve ao forno por 40 minutos</li>
+</ol>
+
+<ul>
+  <li>Açúcar</li>
+  <li>Farinha</li>
+  <li>Ovos</li>
+</ul>
+
+🧱 Divisão de Áreas no Site
+
+A tag <div> é muito usada para separar seções dentro da página, ajudando na organização do layout:
+
+<div>
+  <h2>Cabeçalho da Página</h2>
+  <p>Bem-vindo ao nosso site!</p>
+</div>
+
+
+Mais adiante, com CSS, essas divisões poderão ser estilizadas para construir áreas como menus, rodapés e colunas.
+
+🧭 Por que estruturar corretamente?
+
+Uma página bem estruturada traz várias vantagens:
+
+Melhor compreensão do conteúdo pelo usuário
+
+Melhor posicionamento em mecanismos de busca
+
+Acessibilidade para leitores de tela
+
+Organização para aplicar estilos com CSS depois
+
+Se o site não tem estrutura, ele não se sustenta. Nesta etapa, o aluno aprende a colocar cada peça no seu devido lugar.
+
+✅ Conclusão
+
+A estruturação do conteúdo em HTML é o primeiro passo para transformar uma página simples em algo visualmente organizado e fácil de usar. Por meio de títulos, listas, imagens e links, o desenvolvedor começa a criar layouts que contam histórias, informam, conectam e conduzem o usuário pela página.
+
+Com esse conhecimento em mãos, estamos prontos para avançar à próxima fase: dar estilo e vida ao conteúdo utilizando CSS.

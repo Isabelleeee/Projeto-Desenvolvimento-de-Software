@@ -1,0 +1,17 @@
+Etapa 2 — Tipos de Dados e Variáveis
+
+Todo algoritmo trabalha com informações chamadas dados, que são armazenadas em variáveis. 
+Uma variável é um espaço nomeado na memória onde guardamos um valor que pode mudar durante a execução do programa.
+
+Os tipos de dados definem o formato e o comportamento dos valores armazenados:
+- Inteiro (Integer): números inteiros, como 10 ou -5.
+- Real (Float): números com casas decimais, como 3.14.
+- Caractere (Character): um único símbolo, como 'A'.
+- Cadeia (String): sequência de caracteres, como "Maria".
+- Lógico (Boolean): representa condições, como verdadeiro ou falso.
+
+Para usar variáveis, é necessário declará-las com um nome e tipo, e depois atribuir valores usando o operador ← (“recebe”). 
+O comando leia é usado para entrada de dados e escreva para saída. 
+
+Boas práticas incluem usar nomes significativos, evitar acentos e manter clareza no código. 
+Essa etapa ensina como representar e manipular dados de forma organizada, tornando o pseudocódigo mais legível e funcional.

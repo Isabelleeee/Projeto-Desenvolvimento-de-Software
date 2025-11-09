@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "Qual é a principal diferença entre uma função e um método em Python?",
+        "alternativas": [
+            "A) Uma função pertence a um objeto, enquanto o método é independente.",
+            "B) Uma função é um bloco independente, e o método pertence a um objeto ou classe.",
+            "C) Ambas são iguais, apenas com nomes diferentes.",
+            "D) O método é usado apenas em módulos matemáticos."
+        ],
+        "resposta_correta": "B) Uma função é um bloco independente, e o método pertence a um objeto ou classe."
+    },
+    {
+        "id": 2,
+        "pergunta": "O que acontece se uma função não tiver o comando return em Python?",
+        "alternativas": [
+            "A) O programa gera erro.",
+            "B) A função retorna automaticamente o valor 0.",
+            "C) A função retorna automaticamente None.",
+            "D) A função não é executada."
+        ],
+        "resposta_correta": "C) A função retorna automaticamente None."
+    }
+]

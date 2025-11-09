@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "pergunta": "O que o Machine Learning permite que os computadores façam?",
+        "alternativas": [
+            "A) Tomem decisões aleatórias",
+            "B) Aprendam com dados",
+            "C) Sejam programados manualmente para cada tarefa",
+            "D) Rodem apenas códigos fixos"
+        ],
+        "resposta_correta": "B) Aprendam com dados"
+    },
+    {
+        "id": 2,
+        "pergunta": "Qual é um exemplo real de aplicação de Machine Learning?",
+        "alternativas": [
+            "A) Gravar vídeos",
+            "B) Classificar e-mails como spam",
+            "C) Escrever textos à mão",
+            "D) Ler PDFs"
+        ],
+        "resposta_correta": "B) Classificar e-mails como spam"
+    }
+]

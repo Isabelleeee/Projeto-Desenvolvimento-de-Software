@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 7 - Grafos",
+  "questions": [
+    {
+      "id": 1,
+      "question": "O que representam as arestas em um grafo?",
+      "options": [
+        "Os dados",
+        "As conexões entre os vértices",
+        "Os índices",
+        "Os pesos do array"
+      ],
+      "answer": "As conexões entre os vértices"
+    },
+    {
+      "id": 2,
+      "question": "Qual estrutura é mais eficiente para grafos com poucas conexões?",
+      "options": [
+        "Matriz de adjacência",
+        "Lista de adjacência",
+        "Tabela hash",
+        "Árvore binária"
+      ],
+      "answer": "Lista de adjacência"
+    }
+  ]
+}

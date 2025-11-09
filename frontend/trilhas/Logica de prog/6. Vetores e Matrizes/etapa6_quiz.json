@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 6 — Vetores e Matrizes (Arrays and Matrices)",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual a principal diferença entre vetor e matriz?",
+      "options": [
+        "Vetor é tridimensional",
+        "Matriz armazena dados em duas dimensões",
+        "Vetor é mais lento",
+        "Matriz só armazena números inteiros"
+      ],
+      "answer": "Matriz armazena dados em duas dimensões"
+    },
+    {
+      "id": 2,
+      "question": "O que acontece ao acessar notas[6] em um vetor declarado como notas[5]?",
+      "options": [
+        "O programa repete a execução",
+        "O algoritmo entra em loop infinito",
+        "Erro: índice fora dos limites",
+        "O valor é lido como zero"
+      ],
+      "answer": "Erro: índice fora dos limites"
+    }
+  ]
+}

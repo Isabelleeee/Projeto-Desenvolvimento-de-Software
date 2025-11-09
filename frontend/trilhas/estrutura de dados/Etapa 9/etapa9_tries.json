@@ -1,0 +1,27 @@
+{
+  "title": "Etapa 9 - Tries",
+  "questions": [
+    {
+      "id": 1,
+      "question": "O que cada nó de uma Trie representa?",
+      "options": [
+        "Uma palavra",
+        "Um caractere",
+        "Um número",
+        "Um índice"
+      ],
+      "answer": "Um caractere"
+    },
+    {
+      "id": 2,
+      "question": "Qual é a principal vantagem da Trie?",
+      "options": [
+        "Busca rápida por prefixos",
+        "Menor uso de memória",
+        "Ordenação automática",
+        "Implementação simples"
+      ],
+      "answer": "Busca rápida por prefixos"
+    }
+  ]
+}

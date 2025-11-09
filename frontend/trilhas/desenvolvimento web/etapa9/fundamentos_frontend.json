@@ -1,0 +1,28 @@
+{
+  "title": "Fundamentos do Front-end",
+  "summary": "O Front-end é a parte do desenvolvimento web responsável pela interface visual e interativa dos sites. Ele utiliza três tecnologias principais: HTML (estrutura), CSS (estilo) e JavaScript (interatividade). O desenvolvedor front-end cria experiências acessíveis e responsivas, garantindo que o site funcione bem em diferentes dispositivos. Ele usa ferramentas como VS Code e navegadores para testar e ajustar o código. Em resumo, o front-end une design e funcionalidade, tornando ideias visuais em experiências reais na web.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Quais são as três tecnologias que formam a base do desenvolvimento front-end?",
+      "options": [
+        "HTML, CSS e JavaScript",
+        "Python, SQL e PHP",
+        "HTML, React e Node.js",
+        "CSS, Java e MySQL"
+      ],
+      "answer": "HTML, CSS e JavaScript"
+    },
+    {
+      "id": 2,
+      "question": "Qual é o principal objetivo do desenvolvedor front-end?",
+      "options": [
+        "Gerenciar servidores e bancos de dados",
+        "Criar a parte visual e interativa que o usuário utiliza",
+        "Projetar redes de computadores",
+        "Escrever apenas o código de back-end"
+      ],
+      "answer": "Criar a parte visual e interativa que o usuário utiliza"
+    }
+  ]
+}
